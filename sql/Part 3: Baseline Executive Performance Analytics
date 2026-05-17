@@ -25,9 +25,6 @@ ORDER BY d.year;
 -- ► 2024: $11.03M revenue, 23.85% margin, 4.46% blended discount rate — a solid baseline.
 --   2025: $10.56M revenue, 20.86% margin, 7.55% blended discount rate.
 --   Revenue fell 4.3% YoY while profit fell 16.3% and margin compressed 3pp.
---   The divergence between a modest revenue decline and a steep margin decline points
---   directly to discounting: revenue fell because of volume, margin fell because of policy.
---   2024 is the benchmark against which all H2 2025 findings should be read.
 
 
 -- Q2: How did each category perform YoY?
@@ -43,12 +40,12 @@ JOIN silver.dim_products AS p ON s.product_id = p.product_id
 JOIN silver.dim_date     AS d ON s.order_date = d.date
 GROUP BY p.category, d.year
 ORDER BY p.category, d.year;
--- ► Electronics: margin fell from 14.7% (2024) to 8.3% (2025) as discount rate rose
---   from 5.6% to 11.2% — the entire YoY story is in this one category.
+-- ► Electronics: margin fell from 14.7% (2024) to 9.11% (2025) as discount rate rose
+--   from 5.6% to 10.7% — the entire YoY story is in this one category.
 --   Grocery, Household, and Personal Care margins were essentially flat year-over-year,
 --   confirming the problem is Electronics-specific, not a company-wide cost issue.
 --   Personal Care stood out as the most resilient category: 44%+ margin both years,
---   lowest discount rate (2.63%), the strongest margin floor in the portfolio.
+--   lowest discount rate (2.57%), the strongest margin floor in the portfolio.
 
 
 -- Q3: What was the quarterly revenue and margin trajectory across both years?
