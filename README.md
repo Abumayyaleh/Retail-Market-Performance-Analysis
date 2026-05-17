@@ -14,7 +14,6 @@ The project uses **PostgreSQL / SQL** for data engineering and business analysis
 
 ## Dashboard & Model Preview 
 
-> **Add screenshots here before publishing.** Export each Power BI page as a PNG (File → Export → Export to PNG) and place the files in the `images/` folder. Then replace these placeholders with the actual image paths.
 
 | Page / View | Preview |
 |---|---|
@@ -25,7 +24,7 @@ The project uses **PostgreSQL / SQL** for data engineering and business analysis
 | Store & Regional | ![Store & Regional](images/store_regional.png) |
 | Customers & Returns | ![Customers & Returns](images/customers_returns.png) |
 
-> Tip: GitHub renders images inline if they are committed to the repo. Aim for screenshots at 1920×1080 or higher.
+
 
 ---
 
