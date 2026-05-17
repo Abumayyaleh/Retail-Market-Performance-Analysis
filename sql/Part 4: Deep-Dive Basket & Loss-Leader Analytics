@@ -1,11 +1,11 @@
 -- =========================================================
 -- RETAIL MARKET PERFORMANCE ANALYSIS
 -- PART 4: OPERATIONAL DEEP DIVES & ADVANCED BASKET LOGIC
--- Sections 6 — 8 (Includes Original Advanced Analysis Insights)
+-- Sections 7 — 9
 -- =========================================================
 
 -- =========================================================
--- SECTION 6 — RETURNS AND INVENTORY
+-- SECTION 7 — RETURNS AND INVENTORY
 -- =========================================================
 
 -- Q1: What is the overall return rate, and how does it break down by category?
@@ -101,7 +101,7 @@ LIMIT 10;
 
 
 -- =========================================================
--- SECTION 7 — CHANNEL AND CUSTOMER ACQUISITION
+-- SECTION 8 — CHANNEL AND CUSTOMER ACQUISITION
 -- =========================================================
 
 -- Q1: How do payment methods and sales channels compare in revenue and profit?
@@ -186,7 +186,7 @@ ORDER BY profit_per_customer DESC;
 
 
 -- =========================================================
--- SECTION 8 — CROSS-CATEGORY BASKET ANALYSIS
+-- SECTION 9 — CROSS-CATEGORY BASKET ANALYSIS
 -- Tests the loss-leader hypothesis: do Electronics buyers
 -- purchase high-margin categories, and does the discount
 -- pay for itself through cross-category profit?
