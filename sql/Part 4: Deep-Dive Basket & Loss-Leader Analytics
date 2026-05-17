@@ -1,9 +1,198 @@
 -- =========================================================
 -- RETAIL MARKET PERFORMANCE ANALYSIS
--- PART 4: LOSS-LEADER MARGIN BREAKEVEN & BASKET ATTACHMENT
+-- PART 4: OPERATIONAL DEEP DIVES & ADVANCED BASKET LOGIC
+-- Sections 6 — 8 (Includes Original Advanced Analysis Insights)
 -- =========================================================
 
--- Q1: Lifetime Cross-Category Re-engagement Rate of Electronics Buyers
+-- =========================================================
+-- SECTION 6 — RETURNS AND INVENTORY
+-- =========================================================
+
+-- Q1: What is the overall return rate, and how does it break down by category?
+WITH category_returns AS (
+    SELECT p.category, SUM(r.returned_qty) AS returned_qty
+    FROM silver.fact_returns AS r
+    JOIN silver.dim_products AS p ON r.product_id = p.product_id
+    GROUP BY p.category
+),
+category_sales AS (
+    SELECT p.category, SUM(s.quantity) AS sold_qty
+    FROM silver.fact_sales   AS s
+    JOIN silver.dim_products AS p ON s.product_id = p.product_id
+    GROUP BY p.category
+)
+SELECT
+    cs.category,
+    cs.sold_qty,
+    cr.returned_qty,
+    ROUND(cr.returned_qty * 100.0 / NULLIF(cs.sold_qty, 0), 2) AS return_rate_pct
+FROM category_sales   AS cs
+JOIN category_returns AS cr ON cs.category = cr.category
+ORDER BY return_rate_pct DESC;
+-- ► Electronics return rate is 4.3% — more than double Grocery (2.07%).
+--   Personal Care (3.24%) and Household (3.05%) sit between the two.
+--   Each returned Electronics item costs the business the refund amount plus the original
+--   discount given — two losses from the same transaction.
+--   Reducing the Electronics return rate by 1pp through better product descriptions or
+--   pre-purchase consultation would recover approximately $50K–$60K in refunds annually.
+
+
+-- Q2: What are the most common return reasons and highest refund costs?
+SELECT
+    r.return_reason,
+    COUNT(*)                       AS return_count,
+    ROUND(SUM(r.refund_amount), 2) AS total_refund
+FROM silver.fact_returns AS r
+JOIN silver.dim_products AS p ON r.product_id = p.product_id
+GROUP BY r.return_reason
+ORDER BY return_count DESC;
+-- ► "Not Needed" is the most frequent reason (5,416 returns, $228K in refunds) — the
+--   only reason with no operational failure behind it. It is a discretionary return
+--   by a customer who changed their mind.
+--   Two policy options: (1) introduce a 10–15% restocking fee for "Not Needed" returns,
+--   recovering $23K–$34K annually; (2) restrict no-fee returns to a 14-day window.
+--   Either option should be piloted in one region before full rollout.
+
+
+-- Q3: Where are chronic low-stock and overstock problems concentrated?
+
+-- Below reorder point (stockout risk)
+SELECT
+    p.category,
+    st.region,
+    COUNT(DISTINCT i.snapshot_month)                AS months_affected,
+    COUNT(*)                                        AS total_low_stock_cases,
+    ROUND(AVG(i.reorder_point - i.ending_stock), 0) AS avg_stock_gap
+FROM silver.fact_inventory_monthly AS i
+JOIN silver.dim_products           AS p  ON i.product_id = p.product_id
+JOIN silver.dim_stores             AS st ON i.store_id   = st.store_id
+WHERE i.ending_stock < i.reorder_point
+GROUP BY p.category, st.region
+ORDER BY total_low_stock_cases DESC
+LIMIT 10;
+-- ► Electronics is chronically understocked across all regions.
+--   Central: 39,951 stockout cases, avg gap 26 units. North: 18,926 cases, gap 28 units.
+--   Every Electronics stockout is a direct lost sale — and critically, a lost cross-category
+--   sale worth ~$226 avg profit per customer (Section 8 Q3).
+--   Electronics stockouts are therefore more expensive than the unit price alone.
+
+-- Overstock (capital lock-up)
+SELECT
+    p.category,
+    st.region,
+    COUNT(DISTINCT i.snapshot_month)                        AS months_affected,
+    COUNT(*)                                                AS total_overstock_cases,
+    ROUND(AVG(i.stock_on_hand - i.reorder_point * 2), 0)   AS avg_excess_units
+FROM silver.fact_inventory_monthly AS i
+JOIN silver.dim_products           AS p  ON i.product_id = p.product_id
+JOIN silver.dim_stores             AS st ON i.store_id   = st.store_id
+WHERE i.stock_on_hand > i.reorder_point * 2
+GROUP BY p.category, st.region
+ORDER BY total_overstock_cases DESC
+LIMIT 10;
+-- ► Grocery Central: 94,013 overstock cases, 155 avg excess units.
+--   Household Central: 60,428 cases.
+--   Personal Care Central: 53,542 cases — the third-largest inventory problem in the
+--   dataset, previously unaddressed. Three categories are simultaneously overstocked
+--   in Central while Electronics — the category that generates the most revenue and
+--   triggers the most cross-category profit — runs out of stock in the same region.
+--   Fix: reduce Grocery, Household, and Personal Care reorder points in Central by
+--   20–30% and redirect the freed working capital toward Electronics replenishment.
+
+
+-- =========================================================
+-- SECTION 7 — CHANNEL AND CUSTOMER ACQUISITION
+-- =========================================================
+
+-- Q1: How do payment methods and sales channels compare in revenue and profit?
+SELECT
+    'Payment Method' AS dimension,
+    payment_method   AS LABEL,
+    COUNT(*)                     AS total_orders,
+    ROUND(SUM(net_revenue), 2)   AS total_revenue,
+    ROUND(SUM(profit), 2)        AS total_profit
+FROM silver.fact_sales
+GROUP BY payment_method
+
+UNION ALL
+
+SELECT
+    'Sales Channel' AS dimension,
+    sales_channel   AS LABEL,
+    COUNT(*)                     AS total_orders,
+    ROUND(SUM(net_revenue), 2)   AS total_revenue,
+    ROUND(SUM(profit), 2)        AS total_profit
+FROM silver.fact_sales
+GROUP BY sales_channel
+
+ORDER BY dimension, total_revenue DESC;
+-- ► In-store dominates both revenue and volume. Card leads payment methods
+--   (177,338 orders, $10.3M), but cash remains significant at 132,528 orders ($7.8M)
+--   — 36% of all transactions. Any cashless or digital-only initiative must account for
+--   this: removing cash would affect more than a third of all transactions and would
+--   disproportionately impact Budget and Regular segments.
+
+
+-- Q2: Did customer signups track with revenue performance over time?
+WITH signups AS (
+    SELECT DATE_TRUNC('month', signup_date)::DATE AS month_start,
+           COUNT(*)                               AS new_customers
+    FROM silver.dim_customers
+    GROUP BY 1
+),
+revenue AS (
+    SELECT DATE_TRUNC('month', order_date)::DATE  AS month_start,
+           ROUND(SUM(net_revenue), 2)             AS revenue
+    FROM silver.fact_sales
+    GROUP BY 1
+)
+SELECT
+    s.month_start,
+    s.new_customers,
+    r.revenue
+FROM signups AS s
+LEFT JOIN revenue AS r ON s.month_start = r.month_start
+WHERE s.month_start >= '2024-01-01'
+  AND s.month_start <  '2026-01-01'
+ORDER BY s.month_start;
+-- ► New customer acquisition stayed stable at 350–490 signups per month throughout —
+--   including during the H2 2025 profit collapse. This eliminates demand weakness as a
+--   cause and confirms the H2 discount spike (Section 8 Q6) as the primary driver.
+--   The customer base is healthy. The business does not need a growth campaign —
+--   it needs a pricing ceiling.
+
+
+-- Q3: Which acquisition channels bring the most valuable customers?
+SELECT
+    c.acquisition_channel,
+    COUNT(DISTINCT c.customer_id)                                                    AS total_customers,
+    ROUND(SUM(s.net_revenue), 2)                                                     AS total_revenue,
+    ROUND(SUM(s.profit), 2)                                                          AS total_profit,
+    ROUND(SUM(s.net_revenue) / NULLIF(COUNT(DISTINCT c.customer_id), 0), 2)        AS revenue_per_customer,
+    ROUND(SUM(s.profit)      / NULLIF(COUNT(DISTINCT c.customer_id), 0), 2)        AS profit_per_customer
+FROM silver.dim_customers AS c
+JOIN silver.fact_sales    AS s ON c.customer_id = s.customer_id
+GROUP BY c.acquisition_channel
+ORDER BY profit_per_customer DESC;
+-- ► All channels deliver near-identical profit per customer (~$190).
+--   Store (in-store) dominates purely through volume, not buyer quality.
+--   Referral (2,015 customers, near-zero acquisition cost) is the highest-ROI channel
+--   by cost-per-acquisition. A structured referral programme with dual-sided incentives
+--   is the highest-leverage acquisition action available without increasing the
+--   marketing budget.
+--   The loyalty_contact_pref column (Email / Push / SMS) in dim_customers can be used
+--   to personalise referral outreach by each customer's preferred channel, improving
+--   activation rates with no additional cost.
+
+
+-- =========================================================
+-- SECTION 8 — CROSS-CATEGORY BASKET ANALYSIS
+-- Tests the loss-leader hypothesis: do Electronics buyers
+-- purchase high-margin categories, and does the discount
+-- pay for itself through cross-category profit?
+-- =========================================================
+
+-- Q1: What % of Electronics buyers also purchase other categories?
 WITH electronics_customers AS (
     SELECT DISTINCT s.customer_id
     FROM silver.fact_sales   AS s
@@ -24,8 +213,16 @@ SELECT
         / NULLIF(COUNT(DISTINCT ec.customer_id), 0), 2)                         AS cross_category_rate_pct
 FROM electronics_customers AS ec
 LEFT JOIN multi_category_buyers AS mcb ON ec.customer_id = mcb.customer_id;
+-- ► 18,460 Electronics buyers. 18,412 also purchased other categories at some point.
+--   Cross-category rate: 99.74% (lifetime history basis).
+--   Even accounting for the lifetime-history measurement (which slightly inflates the
+--   rate vs a single-session basket measurement), the attachment is overwhelmingly high.
+--   The loss-leader model is working at near-perfect efficiency: Electronics discounting
+--   is pulling virtually every buyer into higher-margin categories across their journey.
 
--- Q2: Profit Margins Generated by Electronics Buyers in Other Categories
+
+-- Q2: Which categories do Electronics buyers also purchase,
+--     and what margin do those purchases generate?
 WITH electronics_customers AS (
     SELECT DISTINCT s.customer_id
     FROM silver.fact_sales   AS s
@@ -33,26 +230,34 @@ WITH electronics_customers AS (
     WHERE p.category = 'Electronics'
 )
 SELECT
-    p.category                                                      AS other_category,
-    COUNT(DISTINCT s.customer_id)                                   AS buyer_count,
-    ROUND(SUM(s.net_revenue), 2)                                    AS total_revenue,
-    ROUND(SUM(s.profit), 2)                                         AS total_profit,
-    ROUND(SUM(s.profit) * 100.0 / NULLIF(SUM(s.net_revenue), 0), 2) AS profit_margin_pct
+    p.category                                                                   AS other_category,
+    COUNT(DISTINCT s.customer_id)                                                AS buyer_count,
+    ROUND(SUM(s.net_revenue), 2)                                                 AS total_revenue,
+    ROUND(SUM(s.profit), 2)                                                      AS total_profit,
+    ROUND(SUM(s.profit) * 100.0 / NULLIF(SUM(s.net_revenue), 0), 2)             AS profit_margin_pct
 FROM silver.fact_sales       AS s
 JOIN silver.dim_products     AS p  ON s.product_id  = p.product_id
 JOIN electronics_customers   AS ec ON s.customer_id = ec.customer_id
 WHERE p.category != 'Electronics'
 GROUP BY p.category
 ORDER BY total_revenue DESC;
+-- ► Electronics buyers purchase across all three high-margin categories —
+--   Grocery (31% margin), Household (39%), and Personal Care (44%).
+--   The cross-sell is broad and not concentrated in a single category, which makes
+--   the model robust to changes in any single category's performance.
+--   Personal Care — the highest-margin category — benefits significantly from
+--   Electronics-driven traffic, reinforcing its value as a priority category.
 
--- Q3: Customer Value Comparison (Electronics-Only vs. Cross-Category Buyers)
+
+-- Q3: What is the average profit per customer —
+--     Electronics-only vs cross-category buyers?
 WITH customer_categories AS (
     SELECT
         s.customer_id,
-        COUNT(DISTINCT p.category)                                   AS categories_purchased,
+        COUNT(DISTINCT p.category)                                    AS categories_purchased,
         MAX(CASE WHEN p.category = 'Electronics' THEN 1 ELSE 0 END)  AS bought_electronics,
-        SUM(s.net_revenue)                                           AS total_revenue,
-        SUM(s.profit)                                                AS total_profit
+        SUM(s.net_revenue)                                            AS total_revenue,
+        SUM(s.profit)                                                 AS total_profit
     FROM silver.fact_sales   AS s
     JOIN silver.dim_products AS p ON s.product_id = p.product_id
     GROUP BY s.customer_id
@@ -62,17 +267,54 @@ SELECT
         WHEN bought_electronics = 1 AND categories_purchased = 1 THEN 'Electronics Only'
         WHEN bought_electronics = 1 AND categories_purchased > 1 THEN 'Electronics + Other'
         ELSE 'Non-Electronics'
-    END                                                              AS buyer_type,
-    COUNT(*)                                                         AS customer_count,
-    ROUND(AVG(total_revenue), 2)                                     AS avg_revenue_per_customer,
-    ROUND(AVG(total_profit),  2)                                     AS avg_profit_per_customer,
+    END                                                               AS buyer_type,
+    COUNT(*)                                                          AS customer_count,
+    ROUND(AVG(total_revenue), 2)                                      AS avg_revenue_per_customer,
+    ROUND(AVG(total_profit),  2)                                      AS avg_profit_per_customer,
     ROUND(SUM(total_profit) * 100.0
         / NULLIF(SUM(total_revenue), 0), 2)                          AS blended_margin_pct
 FROM customer_categories
 GROUP BY buyer_type
 ORDER BY avg_profit_per_customer DESC;
+-- ► Electronics + Other: $226.77 avg profit per customer.
+--   Electronics Only:    $44.65 avg profit per customer.
+--   A 5× difference. Combined with the near-universal cross-category attachment rate,
+--   this confirms that Electronics discounting is generating a measurable and substantial
+--   return. The discount is the mechanism that converts a $44 customer into a $226 customer.
 
--- Q4: Timeline of the 2025 Discount Escalation Strategy by Brand & Segment
+
+-- Q4: Which Electronics products most frequently appear in multi-category orders?
+SELECT
+    p.product_name,
+    p.brand,
+    COUNT(DISTINCT s.order_id)                                          AS total_orders,
+    SUM(CASE WHEN oc.categories_in_order > 1 THEN 1 ELSE 0 END)        AS multi_category_orders,
+    ROUND(SUM(CASE WHEN oc.categories_in_order > 1 THEN 1 ELSE 0 END)
+        * 100.0 / NULLIF(COUNT(DISTINCT s.order_id), 0), 2)            AS basket_attachment_rate_pct,
+    ROUND(SUM(s.profit) * 100.0
+        / NULLIF(SUM(s.net_revenue), 0), 2)                            AS product_margin_pct
+FROM silver.fact_sales   AS s
+JOIN silver.dim_products AS p ON s.product_id = p.product_id
+JOIN (
+    SELECT s2.order_id, COUNT(DISTINCT p2.category) AS categories_in_order
+    FROM silver.fact_sales   AS s2
+    JOIN silver.dim_products AS p2 ON s2.product_id = p2.product_id
+    GROUP BY s2.order_id
+) AS oc ON s.order_id = oc.order_id
+WHERE p.category = 'Electronics'
+GROUP BY p.product_name, p.brand
+HAVING COUNT(DISTINCT s.order_id) > 20
+ORDER BY basket_attachment_rate_pct DESC
+LIMIT 10;
+-- ► Products with high basket_attachment_rate_pct but low margin (e.g. Voltix Item 628)
+--   have a commercial argument for continued discounting — they are pulling high-margin
+--   purchases into the same basket.
+--   Products with low attachment AND low margin have no loss-leader justification and
+--   should be the first targets for a pricing floor or discontinuation review.
+
+
+-- Q5: Did specific brands or subcategories drive the H2 discount spike,
+--     or was it a uniform central policy change?
 SELECT
     p.subcategory,
     p.brand,
@@ -88,8 +330,15 @@ WHERE d.year = 2025
 GROUP BY p.subcategory, p.brand
 HAVING SUM(s.gross_revenue) > 50000
 ORDER BY h2_discount_pct DESC;
+-- ► H1 rates: all brands and subcategories clustered between 4.09%–4.72%.
+--   H2 rates: all brands and subcategories jumped uniformly to 16.86%–17.53%.
+--   The uniformity across NovaTech, Voltix, SoundArc, and HomeWave — and across
+--   Accessories, Audio, and Phones simultaneously — rules out a product mix shift,
+--   a rogue promotion, or a single brand decision. This was a centrally applied
+--   pricing policy change. The fix is a policy-level ceiling, not a product review.
 
--- Q5: Final Strategy Breakeven Optimization Model (H1 vs H2 2025)
+
+-- Q6: Discount breakeven analysis — at what rate does the loss-leader model break down?
 WITH electronics_orders AS (
     SELECT
         s.customer_id,
@@ -133,3 +382,13 @@ LEFT JOIN customer_other_profit AS cop
    AND eo.half        = cop.half
 GROUP BY eo.half
 ORDER BY eo.half;
+-- ► H1 (4.36% discount): avg Electronics profit $54.11 + cross-category $41.28 = $93.68 total.
+--   H2 (17.22% discount): avg Electronics profit  $5.50 + cross-category $36.73 = $40.48 total.
+--   Cross-category profit remained stable across both halves ($37–41) — the collapse was
+--   driven entirely by Electronics margin compression, not by customers buying less from
+--   other categories.
+--   Breakeven ceiling: at ~$367 avg gross revenue per order, a discount rate of 8–9%
+--   produces ~$30–33 in discount cost, leaving sufficient Electronics margin to maintain
+--   total profit per customer above $80.
+--   Conclusion: the Electronics loss-leader model is commercially sound at 4–9%.
+--   At 17% it breaks down. The intervention point is the ceiling, not the strategy.
