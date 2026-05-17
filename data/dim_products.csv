@@ -1,0 +1,721 @@
+product_id,product_name,category,subcategory,brand,base_price,unit_cost,launch_date,reorder_priority
+1,DailyBite Snacks Item 1,Grocery,Snacks,DailyBite,1.34,0.81,2021-07-09,Medium
+2,Natura Snacks Item 2,Grocery,Snacks,Natura,8.31,4.74,2024-11-08,Medium
+3,FreshCo Snacks Item 3,Grocery,Snacks,FreshCo,5.91,3.37,2022-11-18,High
+4,DailyBite Snacks Item 4,Grocery,Snacks,DailyBite,9.57,7.25,2023-04-01,High
+5,FreshCo Snacks Item 5,Grocery,Snacks,FreshCo,9.34,6.54,2021-10-10,Low
+6,DailyBite Snacks Item 6,Grocery,Snacks,DailyBite,2.14,1.35,2022-12-02,Low
+7,UrbanFarm Snacks Item 7,Grocery,Snacks,UrbanFarm,6.35,3.88,2022-06-30,High
+8,UrbanFarm Snacks Item 8,Grocery,Snacks,UrbanFarm,2.54,1.78,2025-01-02,Low
+9,FreshCo Snacks Item 9,Grocery,Snacks,FreshCo,7.1,5.46,2021-09-29,Low
+10,FreshCo Snacks Item 10,Grocery,Snacks,FreshCo,5.79,4.37,2022-09-08,Low
+11,DailyBite Snacks Item 11,Grocery,Snacks,DailyBite,9.21,6.83,2021-03-09,Medium
+12,FreshCo Snacks Item 12,Grocery,Snacks,FreshCo,9.55,5.76,2024-10-23,Medium
+13,Natura Snacks Item 13,Grocery,Snacks,Natura,3.2,1.85,2023-02-02,High
+14,Natura Snacks Item 14,Grocery,Snacks,Natura,4.15,2.38,2021-09-30,High
+15,UrbanFarm Snacks Item 15,Grocery,Snacks,UrbanFarm,6.14,4.5,2024-02-05,Medium
+16,Natura Snacks Item 16,Grocery,Snacks,Natura,5.12,3.11,2024-08-15,Medium
+17,FreshCo Snacks Item 17,Grocery,Snacks,FreshCo,2.61,1.53,2023-11-30,Low
+18,FreshCo Snacks Item 18,Grocery,Snacks,FreshCo,1.59,1.06,2024-08-26,Low
+19,FreshCo Snacks Item 19,Grocery,Snacks,FreshCo,7.28,4.18,2024-06-09,High
+20,UrbanFarm Snacks Item 20,Grocery,Snacks,UrbanFarm,11.78,6.84,2024-03-22,Medium
+21,DailyBite Snacks Item 21,Grocery,Snacks,DailyBite,3.93,2.49,2021-12-20,High
+22,DailyBite Snacks Item 22,Grocery,Snacks,DailyBite,11.08,7.76,2021-09-23,Low
+23,Natura Snacks Item 23,Grocery,Snacks,Natura,8.64,6.2,2021-09-12,Medium
+24,UrbanFarm Snacks Item 24,Grocery,Snacks,UrbanFarm,9.61,5.49,2022-12-15,Medium
+25,DailyBite Snacks Item 25,Grocery,Snacks,DailyBite,9.4,5.43,2024-10-14,Medium
+26,UrbanFarm Snacks Item 26,Grocery,Snacks,UrbanFarm,4.67,2.91,2024-01-12,Medium
+27,DailyBite Snacks Item 27,Grocery,Snacks,DailyBite,7.08,5.5,2024-08-09,Low
+28,Natura Snacks Item 28,Grocery,Snacks,Natura,7.47,4.62,2024-01-13,Low
+29,UrbanFarm Snacks Item 29,Grocery,Snacks,UrbanFarm,11.97,9.33,2024-07-19,Low
+30,FreshCo Snacks Item 30,Grocery,Snacks,FreshCo,2.57,1.44,2024-12-15,High
+31,FreshCo Snacks Item 31,Grocery,Snacks,FreshCo,1.63,1.21,2023-03-21,Medium
+32,Natura Snacks Item 32,Grocery,Snacks,Natura,10.36,7.39,2021-01-07,High
+33,FreshCo Snacks Item 33,Grocery,Snacks,FreshCo,8.81,5.77,2022-01-08,Medium
+34,UrbanFarm Snacks Item 34,Grocery,Snacks,UrbanFarm,7.36,4.91,2024-11-22,Medium
+35,DailyBite Snacks Item 35,Grocery,Snacks,DailyBite,5.71,3.42,2022-12-17,Low
+36,DailyBite Snacks Item 36,Grocery,Snacks,DailyBite,7.3,4.54,2023-03-01,Medium
+37,DailyBite Snacks Item 37,Grocery,Snacks,DailyBite,9.1,6.68,2021-03-25,High
+38,FreshCo Snacks Item 38,Grocery,Snacks,FreshCo,1.61,1.16,2023-11-30,Medium
+39,FreshCo Snacks Item 39,Grocery,Snacks,FreshCo,2.32,1.44,2022-05-16,Low
+40,FreshCo Snacks Item 40,Grocery,Snacks,FreshCo,6.78,4.59,2024-06-18,Low
+41,DailyBite Snacks Item 41,Grocery,Snacks,DailyBite,9.31,7.06,2025-02-02,Medium
+42,Natura Snacks Item 42,Grocery,Snacks,Natura,1.93,1.36,2024-08-14,High
+43,DailyBite Snacks Item 43,Grocery,Snacks,DailyBite,6.31,4.32,2023-02-15,Medium
+44,FreshCo Snacks Item 44,Grocery,Snacks,FreshCo,11.09,6.16,2023-04-30,Medium
+45,FreshCo Snacks Item 45,Grocery,Snacks,FreshCo,8.73,6.33,2022-11-23,Low
+46,UrbanFarm Beverages Item 46,Grocery,Beverages,UrbanFarm,9.06,7.03,2021-01-08,Low
+47,FreshCo Beverages Item 47,Grocery,Beverages,FreshCo,9.55,6.16,2022-02-04,High
+48,UrbanFarm Beverages Item 48,Grocery,Beverages,UrbanFarm,1.41,1.0,2022-07-27,Low
+49,FreshCo Beverages Item 49,Grocery,Beverages,FreshCo,7.84,4.37,2022-09-15,Medium
+50,UrbanFarm Beverages Item 50,Grocery,Beverages,UrbanFarm,10.39,7.83,2022-09-30,High
+51,UrbanFarm Beverages Item 51,Grocery,Beverages,UrbanFarm,4.26,3.03,2022-06-01,Medium
+52,FreshCo Beverages Item 52,Grocery,Beverages,FreshCo,1.74,1.09,2025-01-10,High
+53,DailyBite Beverages Item 53,Grocery,Beverages,DailyBite,3.59,2.46,2021-09-24,High
+54,FreshCo Beverages Item 54,Grocery,Beverages,FreshCo,4.12,2.71,2022-02-05,Low
+55,UrbanFarm Beverages Item 55,Grocery,Beverages,UrbanFarm,7.18,4.67,2021-03-18,Low
+56,FreshCo Beverages Item 56,Grocery,Beverages,FreshCo,6.01,3.83,2023-01-06,Medium
+57,DailyBite Beverages Item 57,Grocery,Beverages,DailyBite,1.02,0.67,2023-03-06,Medium
+58,DailyBite Beverages Item 58,Grocery,Beverages,DailyBite,3.67,2.8,2023-06-25,Low
+59,FreshCo Beverages Item 59,Grocery,Beverages,FreshCo,11.11,7.69,2023-01-11,High
+60,FreshCo Beverages Item 60,Grocery,Beverages,FreshCo,7.81,5.95,2024-01-07,Medium
+61,UrbanFarm Beverages Item 61,Grocery,Beverages,UrbanFarm,9.79,5.56,2023-09-16,Medium
+62,Natura Beverages Item 62,Grocery,Beverages,Natura,9.12,5.32,2022-02-02,Low
+63,FreshCo Beverages Item 63,Grocery,Beverages,FreshCo,11.92,8.03,2021-07-18,Medium
+64,DailyBite Beverages Item 64,Grocery,Beverages,DailyBite,10.2,6.2,2023-03-10,Medium
+65,Natura Beverages Item 65,Grocery,Beverages,Natura,9.34,6.85,2023-09-14,Medium
+66,DailyBite Beverages Item 66,Grocery,Beverages,DailyBite,2.64,2.01,2023-08-27,Medium
+67,DailyBite Beverages Item 67,Grocery,Beverages,DailyBite,9.16,6.94,2022-10-09,Low
+68,Natura Beverages Item 68,Grocery,Beverages,Natura,11.77,7.34,2023-05-14,Medium
+69,UrbanFarm Beverages Item 69,Grocery,Beverages,UrbanFarm,3.16,2.24,2022-12-11,High
+70,UrbanFarm Beverages Item 70,Grocery,Beverages,UrbanFarm,4.06,2.47,2023-10-08,Low
+71,DailyBite Beverages Item 71,Grocery,Beverages,DailyBite,3.78,2.93,2024-11-12,Medium
+72,DailyBite Beverages Item 72,Grocery,Beverages,DailyBite,2.07,1.26,2024-01-15,Medium
+73,DailyBite Beverages Item 73,Grocery,Beverages,DailyBite,5.45,3.15,2023-07-16,Medium
+74,FreshCo Beverages Item 74,Grocery,Beverages,FreshCo,5.95,3.74,2021-02-24,High
+75,UrbanFarm Beverages Item 75,Grocery,Beverages,UrbanFarm,9.55,6.21,2024-06-05,Low
+76,UrbanFarm Beverages Item 76,Grocery,Beverages,UrbanFarm,7.1,5.4,2023-03-04,Low
+77,Natura Beverages Item 77,Grocery,Beverages,Natura,11.87,9.05,2023-09-14,Medium
+78,Natura Beverages Item 78,Grocery,Beverages,Natura,9.73,5.36,2024-04-11,Low
+79,FreshCo Beverages Item 79,Grocery,Beverages,FreshCo,7.96,5.22,2023-02-28,Low
+80,DailyBite Beverages Item 80,Grocery,Beverages,DailyBite,8.46,6.11,2022-06-26,Medium
+81,UrbanFarm Beverages Item 81,Grocery,Beverages,UrbanFarm,9.12,6.92,2022-11-28,Low
+82,DailyBite Beverages Item 82,Grocery,Beverages,DailyBite,2.01,1.26,2024-10-01,Low
+83,Natura Beverages Item 83,Grocery,Beverages,Natura,4.03,2.4,2024-01-24,Medium
+84,DailyBite Beverages Item 84,Grocery,Beverages,DailyBite,4.53,2.91,2024-06-24,Medium
+85,UrbanFarm Beverages Item 85,Grocery,Beverages,UrbanFarm,6.99,5.31,2025-02-04,Medium
+86,UrbanFarm Beverages Item 86,Grocery,Beverages,UrbanFarm,6.29,3.83,2022-03-13,Low
+87,UrbanFarm Beverages Item 87,Grocery,Beverages,UrbanFarm,1.08,0.79,2024-11-19,Medium
+88,FreshCo Beverages Item 88,Grocery,Beverages,FreshCo,7.82,5.72,2023-12-03,Low
+89,UrbanFarm Beverages Item 89,Grocery,Beverages,UrbanFarm,5.66,4.4,2021-06-27,Medium
+90,UrbanFarm Beverages Item 90,Grocery,Beverages,UrbanFarm,6.07,4.44,2021-12-19,High
+91,Natura Dairy Item 91,Grocery,Dairy,Natura,6.4,3.75,2021-05-11,Medium
+92,DailyBite Dairy Item 92,Grocery,Dairy,DailyBite,1.38,1.03,2022-09-28,Medium
+93,DailyBite Dairy Item 93,Grocery,Dairy,DailyBite,3.83,2.43,2024-02-14,Low
+94,FreshCo Dairy Item 94,Grocery,Dairy,FreshCo,2.93,2.05,2024-12-04,Low
+95,UrbanFarm Dairy Item 95,Grocery,Dairy,UrbanFarm,3.43,2.32,2024-10-28,Medium
+96,Natura Dairy Item 96,Grocery,Dairy,Natura,3.86,2.47,2023-08-18,Low
+97,Natura Dairy Item 97,Grocery,Dairy,Natura,1.01,0.76,2022-05-26,Medium
+98,FreshCo Dairy Item 98,Grocery,Dairy,FreshCo,3.15,2.04,2022-05-31,Low
+99,DailyBite Dairy Item 99,Grocery,Dairy,DailyBite,4.93,3.77,2022-09-03,High
+100,FreshCo Dairy Item 100,Grocery,Dairy,FreshCo,9.3,5.97,2024-10-19,High
+101,FreshCo Dairy Item 101,Grocery,Dairy,FreshCo,6.49,4.44,2024-04-12,Medium
+102,UrbanFarm Dairy Item 102,Grocery,Dairy,UrbanFarm,4.95,3.78,2022-07-30,Medium
+103,DailyBite Dairy Item 103,Grocery,Dairy,DailyBite,7.1,4.18,2024-02-12,Medium
+104,UrbanFarm Dairy Item 104,Grocery,Dairy,UrbanFarm,10.09,7.75,2023-07-14,Medium
+105,FreshCo Dairy Item 105,Grocery,Dairy,FreshCo,7.19,4.72,2025-01-22,Medium
+106,DailyBite Dairy Item 106,Grocery,Dairy,DailyBite,3.97,3.07,2024-12-14,Medium
+107,UrbanFarm Dairy Item 107,Grocery,Dairy,UrbanFarm,2.11,1.46,2024-08-14,High
+108,UrbanFarm Dairy Item 108,Grocery,Dairy,UrbanFarm,4.13,2.71,2024-03-31,Low
+109,Natura Dairy Item 109,Grocery,Dairy,Natura,6.08,3.82,2022-09-15,Low
+110,UrbanFarm Dairy Item 110,Grocery,Dairy,UrbanFarm,8.17,4.56,2021-11-02,Medium
+111,Natura Dairy Item 111,Grocery,Dairy,Natura,10.93,6.16,2024-07-30,Medium
+112,Natura Dairy Item 112,Grocery,Dairy,Natura,5.9,3.63,2023-03-23,High
+113,UrbanFarm Dairy Item 113,Grocery,Dairy,UrbanFarm,10.26,6.93,2022-11-16,Medium
+114,DailyBite Dairy Item 114,Grocery,Dairy,DailyBite,4.98,3.25,2024-07-14,High
+115,FreshCo Dairy Item 115,Grocery,Dairy,FreshCo,3.41,1.91,2022-07-01,Medium
+116,UrbanFarm Dairy Item 116,Grocery,Dairy,UrbanFarm,7.89,6.06,2023-07-21,Medium
+117,UrbanFarm Dairy Item 117,Grocery,Dairy,UrbanFarm,9.48,6.68,2023-12-09,Low
+118,UrbanFarm Dairy Item 118,Grocery,Dairy,UrbanFarm,2.18,1.7,2024-01-06,Low
+119,Natura Dairy Item 119,Grocery,Dairy,Natura,8.01,5.28,2024-09-17,Medium
+120,DailyBite Dairy Item 120,Grocery,Dairy,DailyBite,10.42,8.03,2021-03-10,Medium
+121,Natura Dairy Item 121,Grocery,Dairy,Natura,3.37,2.43,2024-04-18,Low
+122,FreshCo Dairy Item 122,Grocery,Dairy,FreshCo,4.2,2.48,2022-01-08,Low
+123,DailyBite Dairy Item 123,Grocery,Dairy,DailyBite,7.05,5.09,2022-05-25,Low
+124,DailyBite Dairy Item 124,Grocery,Dairy,DailyBite,6.14,3.76,2024-09-13,Medium
+125,FreshCo Dairy Item 125,Grocery,Dairy,FreshCo,11.23,7.76,2024-02-15,Low
+126,FreshCo Dairy Item 126,Grocery,Dairy,FreshCo,6.25,4.64,2024-03-01,High
+127,UrbanFarm Dairy Item 127,Grocery,Dairy,UrbanFarm,10.79,8.26,2021-12-02,Low
+128,FreshCo Dairy Item 128,Grocery,Dairy,FreshCo,11.44,6.75,2022-03-26,High
+129,Natura Dairy Item 129,Grocery,Dairy,Natura,3.59,2.33,2024-01-12,Low
+130,UrbanFarm Dairy Item 130,Grocery,Dairy,UrbanFarm,1.05,0.7,2021-08-23,Low
+131,DailyBite Dairy Item 131,Grocery,Dairy,DailyBite,3.15,2.23,2021-04-18,Medium
+132,FreshCo Dairy Item 132,Grocery,Dairy,FreshCo,9.3,6.11,2023-08-13,Medium
+133,DailyBite Dairy Item 133,Grocery,Dairy,DailyBite,3.8,2.83,2022-10-13,Low
+134,UrbanFarm Dairy Item 134,Grocery,Dairy,UrbanFarm,11.09,8.31,2021-07-02,High
+135,UrbanFarm Dairy Item 135,Grocery,Dairy,UrbanFarm,9.01,6.66,2022-04-09,Medium
+136,Natura Bakery Item 136,Grocery,Bakery,Natura,7.41,5.33,2022-11-12,Medium
+137,UrbanFarm Bakery Item 137,Grocery,Bakery,UrbanFarm,11.1,8.62,2023-02-14,Medium
+138,UrbanFarm Bakery Item 138,Grocery,Bakery,UrbanFarm,11.78,8.12,2024-10-08,Medium
+139,Natura Bakery Item 139,Grocery,Bakery,Natura,6.45,4.14,2023-02-27,Medium
+140,UrbanFarm Bakery Item 140,Grocery,Bakery,UrbanFarm,10.74,6.48,2022-07-12,Medium
+141,Natura Bakery Item 141,Grocery,Bakery,Natura,6.24,4.6,2021-09-12,High
+142,UrbanFarm Bakery Item 142,Grocery,Bakery,UrbanFarm,4.65,2.64,2024-01-08,Medium
+143,Natura Bakery Item 143,Grocery,Bakery,Natura,7.94,5.18,2024-03-18,Low
+144,DailyBite Bakery Item 144,Grocery,Bakery,DailyBite,3.71,2.11,2023-09-03,Medium
+145,UrbanFarm Bakery Item 145,Grocery,Bakery,UrbanFarm,7.26,5.03,2023-07-04,Medium
+146,FreshCo Bakery Item 146,Grocery,Bakery,FreshCo,5.5,3.32,2023-03-22,Medium
+147,DailyBite Bakery Item 147,Grocery,Bakery,DailyBite,11.21,6.35,2023-04-17,High
+148,DailyBite Bakery Item 148,Grocery,Bakery,DailyBite,5.96,3.87,2025-01-03,High
+149,FreshCo Bakery Item 149,Grocery,Bakery,FreshCo,2.84,2.06,2023-01-09,High
+150,UrbanFarm Bakery Item 150,Grocery,Bakery,UrbanFarm,3.46,2.7,2022-08-26,Low
+151,UrbanFarm Bakery Item 151,Grocery,Bakery,UrbanFarm,6.81,5.29,2023-08-14,Medium
+152,Natura Bakery Item 152,Grocery,Bakery,Natura,6.56,4.11,2021-03-26,Medium
+153,FreshCo Bakery Item 153,Grocery,Bakery,FreshCo,7.09,4.35,2021-02-03,Low
+154,UrbanFarm Bakery Item 154,Grocery,Bakery,UrbanFarm,7.67,5.8,2023-10-20,Low
+155,FreshCo Bakery Item 155,Grocery,Bakery,FreshCo,8.26,5.11,2021-06-07,Medium
+156,DailyBite Bakery Item 156,Grocery,Bakery,DailyBite,1.2,0.89,2023-11-09,Low
+157,FreshCo Bakery Item 157,Grocery,Bakery,FreshCo,3.46,2.64,2023-02-17,Low
+158,UrbanFarm Bakery Item 158,Grocery,Bakery,UrbanFarm,9.39,5.34,2023-08-16,Low
+159,Natura Bakery Item 159,Grocery,Bakery,Natura,9.14,6.1,2024-12-25,Low
+160,FreshCo Bakery Item 160,Grocery,Bakery,FreshCo,6.1,3.89,2021-07-06,Medium
+161,DailyBite Bakery Item 161,Grocery,Bakery,DailyBite,11.86,6.72,2021-02-08,Medium
+162,UrbanFarm Bakery Item 162,Grocery,Bakery,UrbanFarm,10.27,7.74,2021-07-19,Medium
+163,FreshCo Bakery Item 163,Grocery,Bakery,FreshCo,2.54,1.41,2022-09-12,Low
+164,FreshCo Bakery Item 164,Grocery,Bakery,FreshCo,6.02,4.13,2024-01-13,Medium
+165,FreshCo Bakery Item 165,Grocery,Bakery,FreshCo,11.37,8.31,2022-07-04,Medium
+166,DailyBite Bakery Item 166,Grocery,Bakery,DailyBite,2.61,1.94,2021-01-28,Low
+167,FreshCo Bakery Item 167,Grocery,Bakery,FreshCo,11.4,8.71,2023-12-26,Medium
+168,UrbanFarm Bakery Item 168,Grocery,Bakery,UrbanFarm,4.07,2.42,2023-12-08,Low
+169,Natura Bakery Item 169,Grocery,Bakery,Natura,8.42,5.54,2021-03-04,Medium
+170,UrbanFarm Bakery Item 170,Grocery,Bakery,UrbanFarm,1.43,0.83,2022-09-16,High
+171,Natura Bakery Item 171,Grocery,Bakery,Natura,4.76,3.29,2024-11-18,Low
+172,FreshCo Bakery Item 172,Grocery,Bakery,FreshCo,4.01,2.56,2021-12-05,Medium
+173,FreshCo Bakery Item 173,Grocery,Bakery,FreshCo,11.9,8.66,2021-07-02,High
+174,UrbanFarm Bakery Item 174,Grocery,Bakery,UrbanFarm,4.39,2.51,2024-04-19,High
+175,Natura Bakery Item 175,Grocery,Bakery,Natura,2.08,1.27,2024-07-15,Medium
+176,UrbanFarm Bakery Item 176,Grocery,Bakery,UrbanFarm,4.61,2.69,2024-12-18,High
+177,DailyBite Bakery Item 177,Grocery,Bakery,DailyBite,9.63,5.67,2024-11-11,Medium
+178,FreshCo Bakery Item 178,Grocery,Bakery,FreshCo,8.93,5.96,2022-01-27,Low
+179,UrbanFarm Bakery Item 179,Grocery,Bakery,UrbanFarm,4.56,2.61,2024-03-02,Low
+180,UrbanFarm Bakery Item 180,Grocery,Bakery,UrbanFarm,2.25,1.47,2022-12-18,Low
+181,Natura Frozen Item 181,Grocery,Frozen,Natura,1.43,1.1,2024-11-09,Medium
+182,DailyBite Frozen Item 182,Grocery,Frozen,DailyBite,4.27,2.54,2023-11-06,Medium
+183,Natura Frozen Item 183,Grocery,Frozen,Natura,5.17,3.79,2024-04-15,Low
+184,DailyBite Frozen Item 184,Grocery,Frozen,DailyBite,7.18,5.39,2023-02-27,Low
+185,UrbanFarm Frozen Item 185,Grocery,Frozen,UrbanFarm,7.12,4.22,2023-01-13,Medium
+186,UrbanFarm Frozen Item 186,Grocery,Frozen,UrbanFarm,3.2,1.99,2024-09-10,Medium
+187,FreshCo Frozen Item 187,Grocery,Frozen,FreshCo,11.44,7.14,2023-07-16,Low
+188,UrbanFarm Frozen Item 188,Grocery,Frozen,UrbanFarm,5.23,3.8,2021-02-09,Low
+189,DailyBite Frozen Item 189,Grocery,Frozen,DailyBite,3.89,2.59,2024-01-10,Medium
+190,DailyBite Frozen Item 190,Grocery,Frozen,DailyBite,10.55,5.97,2025-01-25,High
+191,UrbanFarm Frozen Item 191,Grocery,Frozen,UrbanFarm,1.98,1.34,2024-08-26,Low
+192,UrbanFarm Frozen Item 192,Grocery,Frozen,UrbanFarm,10.14,7.17,2022-02-02,Medium
+193,DailyBite Frozen Item 193,Grocery,Frozen,DailyBite,4.36,3.0,2022-10-18,Low
+194,FreshCo Frozen Item 194,Grocery,Frozen,FreshCo,1.52,0.86,2022-04-05,High
+195,Natura Frozen Item 195,Grocery,Frozen,Natura,3.83,2.81,2023-03-02,Medium
+196,Natura Frozen Item 196,Grocery,Frozen,Natura,4.63,3.12,2021-07-25,High
+197,FreshCo Frozen Item 197,Grocery,Frozen,FreshCo,2.36,1.69,2021-03-30,Medium
+198,UrbanFarm Frozen Item 198,Grocery,Frozen,UrbanFarm,7.45,5.23,2021-01-10,Medium
+199,FreshCo Frozen Item 199,Grocery,Frozen,FreshCo,6.3,4.31,2024-04-12,Medium
+200,Natura Frozen Item 200,Grocery,Frozen,Natura,7.67,5.42,2024-09-11,Medium
+201,UrbanFarm Frozen Item 201,Grocery,Frozen,UrbanFarm,7.5,5.02,2021-08-29,High
+202,DailyBite Frozen Item 202,Grocery,Frozen,DailyBite,6.56,4.18,2024-09-13,Medium
+203,UrbanFarm Frozen Item 203,Grocery,Frozen,UrbanFarm,1.56,0.93,2024-03-04,High
+204,UrbanFarm Frozen Item 204,Grocery,Frozen,UrbanFarm,4.05,2.83,2023-11-20,High
+205,FreshCo Frozen Item 205,Grocery,Frozen,FreshCo,2.6,1.77,2024-12-15,High
+206,UrbanFarm Frozen Item 206,Grocery,Frozen,UrbanFarm,10.12,5.6,2022-05-10,Medium
+207,FreshCo Frozen Item 207,Grocery,Frozen,FreshCo,6.58,4.19,2023-04-06,Medium
+208,Natura Frozen Item 208,Grocery,Frozen,Natura,8.08,4.93,2021-06-23,Medium
+209,Natura Frozen Item 209,Grocery,Frozen,Natura,7.64,5.95,2022-07-10,Medium
+210,Natura Frozen Item 210,Grocery,Frozen,Natura,8.66,6.43,2024-07-24,Low
+211,DailyBite Frozen Item 211,Grocery,Frozen,DailyBite,5.96,3.45,2024-11-06,High
+212,UrbanFarm Frozen Item 212,Grocery,Frozen,UrbanFarm,5.52,3.22,2022-03-30,High
+213,UrbanFarm Frozen Item 213,Grocery,Frozen,UrbanFarm,6.42,4.8,2022-06-11,High
+214,FreshCo Frozen Item 214,Grocery,Frozen,FreshCo,7.28,4.41,2023-11-15,Medium
+215,Natura Frozen Item 215,Grocery,Frozen,Natura,6.11,4.43,2022-05-25,Medium
+216,Natura Frozen Item 216,Grocery,Frozen,Natura,8.31,5.99,2023-03-18,Low
+217,FreshCo Frozen Item 217,Grocery,Frozen,FreshCo,10.25,7.54,2022-03-29,Medium
+218,Natura Frozen Item 218,Grocery,Frozen,Natura,5.39,3.97,2022-02-14,Medium
+219,FreshCo Frozen Item 219,Grocery,Frozen,FreshCo,4.14,2.76,2023-01-15,Low
+220,UrbanFarm Frozen Item 220,Grocery,Frozen,UrbanFarm,10.02,6.74,2023-02-01,Low
+221,UrbanFarm Frozen Item 221,Grocery,Frozen,UrbanFarm,2.87,1.67,2022-08-30,Medium
+222,FreshCo Frozen Item 222,Grocery,Frozen,FreshCo,6.64,4.78,2024-09-10,Medium
+223,FreshCo Frozen Item 223,Grocery,Frozen,FreshCo,7.11,4.77,2023-03-12,Medium
+224,FreshCo Frozen Item 224,Grocery,Frozen,FreshCo,4.97,2.77,2023-05-01,Medium
+225,UrbanFarm Frozen Item 225,Grocery,Frozen,UrbanFarm,10.57,8.05,2023-01-29,Medium
+226,CleanNest Cleaning Item 226,Household,Cleaning,CleanNest,39.68,26.23,2021-06-02,Low
+227,CleanNest Cleaning Item 227,Household,Cleaning,CleanNest,7.72,4.98,2023-03-20,Low
+228,PureFlow Cleaning Item 228,Household,Cleaning,PureFlow,39.58,25.46,2023-07-03,Medium
+229,Spark Cleaning Item 229,Household,Cleaning,Spark,12.81,6.29,2022-10-29,Medium
+230,Spark Cleaning Item 230,Household,Cleaning,Spark,25.48,12.56,2021-03-27,Low
+231,CleanNest Cleaning Item 231,Household,Cleaning,CleanNest,30.51,19.65,2023-02-24,Low
+232,CleanNest Cleaning Item 232,Household,Cleaning,CleanNest,19.59,10.5,2023-07-24,Medium
+233,CleanNest Cleaning Item 233,Household,Cleaning,CleanNest,15.55,10.25,2021-11-19,Low
+234,CleanNest Cleaning Item 234,Household,Cleaning,CleanNest,8.46,5.32,2024-10-15,Low
+235,Spark Cleaning Item 235,Household,Cleaning,Spark,18.45,11.29,2022-09-07,High
+236,Spark Cleaning Item 236,Household,Cleaning,Spark,8.57,6.14,2024-07-26,Medium
+237,HomeCore Cleaning Item 237,Household,Cleaning,HomeCore,37.52,26.73,2023-07-08,Low
+238,HomeCore Cleaning Item 238,Household,Cleaning,HomeCore,28.25,13.79,2024-08-03,Medium
+239,Spark Cleaning Item 239,Household,Cleaning,Spark,25.23,15.71,2024-10-19,Medium
+240,HomeCore Cleaning Item 240,Household,Cleaning,HomeCore,7.09,4.79,2021-07-08,Medium
+241,CleanNest Cleaning Item 241,Household,Cleaning,CleanNest,35.51,21.46,2022-05-03,High
+242,Spark Cleaning Item 242,Household,Cleaning,Spark,38.91,21.67,2022-01-18,Medium
+243,CleanNest Cleaning Item 243,Household,Cleaning,CleanNest,37.5,24.45,2024-01-21,Medium
+244,Spark Cleaning Item 244,Household,Cleaning,Spark,12.69,8.5,2024-07-24,Medium
+245,HomeCore Cleaning Item 245,Household,Cleaning,HomeCore,11.56,6.23,2023-09-13,Low
+246,HomeCore Cleaning Item 246,Household,Cleaning,HomeCore,31.03,16.97,2023-05-24,Low
+247,CleanNest Cleaning Item 247,Household,Cleaning,CleanNest,30.72,16.72,2022-12-05,Low
+248,PureFlow Cleaning Item 248,Household,Cleaning,PureFlow,12.28,6.44,2023-10-07,Medium
+249,PureFlow Cleaning Item 249,Household,Cleaning,PureFlow,39.11,27.1,2023-07-01,Medium
+250,HomeCore Cleaning Item 250,Household,Cleaning,HomeCore,9.46,5.1,2024-10-02,Low
+251,CleanNest Cleaning Item 251,Household,Cleaning,CleanNest,20.14,13.87,2021-05-12,Medium
+252,HomeCore Cleaning Item 252,Household,Cleaning,HomeCore,8.1,4.29,2022-08-09,High
+253,PureFlow Cleaning Item 253,Household,Cleaning,PureFlow,38.72,20.98,2021-03-23,Medium
+254,PureFlow Cleaning Item 254,Household,Cleaning,PureFlow,28.34,15.65,2021-01-08,Medium
+255,CleanNest Cleaning Item 255,Household,Cleaning,CleanNest,28.24,15.8,2022-02-17,Low
+256,HomeCore Cleaning Item 256,Household,Cleaning,HomeCore,37.98,24.81,2021-04-17,Medium
+257,PureFlow Cleaning Item 257,Household,Cleaning,PureFlow,10.23,6.71,2022-05-21,Medium
+258,Spark Cleaning Item 258,Household,Cleaning,Spark,8.46,5.92,2024-11-16,Medium
+259,Spark Cleaning Item 259,Household,Cleaning,Spark,28.86,20.69,2022-12-18,Low
+260,HomeCore Cleaning Item 260,Household,Cleaning,HomeCore,17.13,10.24,2024-11-10,High
+261,HomeCore Cleaning Item 261,Household,Cleaning,HomeCore,14.38,9.14,2023-04-28,High
+262,Spark Cleaning Item 262,Household,Cleaning,Spark,37.22,17.9,2023-07-30,Medium
+263,CleanNest Cleaning Item 263,Household,Cleaning,CleanNest,25.25,13.82,2021-02-20,Medium
+264,PureFlow Cleaning Item 264,Household,Cleaning,PureFlow,33.08,19.37,2023-02-11,Low
+265,Spark Cleaning Item 265,Household,Cleaning,Spark,14.26,9.99,2022-03-21,High
+266,CleanNest Cleaning Item 266,Household,Cleaning,CleanNest,21.01,10.27,2022-02-15,Low
+267,HomeCore Cleaning Item 267,Household,Cleaning,HomeCore,29.06,15.27,2024-11-08,Medium
+268,PureFlow Cleaning Item 268,Household,Cleaning,PureFlow,29.56,16.48,2021-02-21,Low
+269,CleanNest Cleaning Item 269,Household,Cleaning,CleanNest,26.99,15.24,2021-12-23,High
+270,CleanNest Cleaning Item 270,Household,Cleaning,CleanNest,21.89,11.85,2024-10-15,Low
+271,Spark Paper Goods Item 271,Household,Paper Goods,Spark,6.58,3.62,2021-05-26,Medium
+272,Spark Paper Goods Item 272,Household,Paper Goods,Spark,19.63,11.33,2021-04-12,Medium
+273,PureFlow Paper Goods Item 273,Household,Paper Goods,PureFlow,12.74,7.01,2022-07-16,Low
+274,Spark Paper Goods Item 274,Household,Paper Goods,Spark,28.19,13.75,2021-10-28,Medium
+275,CleanNest Paper Goods Item 275,Household,Paper Goods,CleanNest,21.3,13.22,2023-05-30,Medium
+276,HomeCore Paper Goods Item 276,Household,Paper Goods,HomeCore,19.88,11.96,2023-03-01,High
+277,CleanNest Paper Goods Item 277,Household,Paper Goods,CleanNest,35.19,21.53,2024-08-11,Medium
+278,Spark Paper Goods Item 278,Household,Paper Goods,Spark,5.02,3.24,2022-10-23,High
+279,HomeCore Paper Goods Item 279,Household,Paper Goods,HomeCore,33.25,21.22,2022-12-11,Low
+280,CleanNest Paper Goods Item 280,Household,Paper Goods,CleanNest,32.32,20.63,2023-10-14,High
+281,Spark Paper Goods Item 281,Household,Paper Goods,Spark,33.58,16.73,2022-10-23,Medium
+282,Spark Paper Goods Item 282,Household,Paper Goods,Spark,10.76,6.92,2021-02-25,Medium
+283,HomeCore Paper Goods Item 283,Household,Paper Goods,HomeCore,5.26,2.55,2022-06-08,Medium
+284,Spark Paper Goods Item 284,Household,Paper Goods,Spark,32.55,19.05,2022-07-17,Medium
+285,HomeCore Paper Goods Item 285,Household,Paper Goods,HomeCore,36.73,25.02,2021-11-25,Medium
+286,HomeCore Paper Goods Item 286,Household,Paper Goods,HomeCore,21.94,11.21,2022-05-26,High
+287,CleanNest Paper Goods Item 287,Household,Paper Goods,CleanNest,24.54,14.7,2023-02-18,Medium
+288,PureFlow Paper Goods Item 288,Household,Paper Goods,PureFlow,38.97,23.78,2024-06-16,Medium
+289,Spark Paper Goods Item 289,Household,Paper Goods,Spark,19.56,9.62,2023-07-31,Medium
+290,HomeCore Paper Goods Item 290,Household,Paper Goods,HomeCore,25.32,17.54,2022-09-25,High
+291,CleanNest Paper Goods Item 291,Household,Paper Goods,CleanNest,34.67,19.08,2023-02-07,Medium
+292,HomeCore Paper Goods Item 292,Household,Paper Goods,HomeCore,22.14,15.2,2021-09-27,Low
+293,PureFlow Paper Goods Item 293,Household,Paper Goods,PureFlow,20.05,13.21,2023-07-29,Medium
+294,CleanNest Paper Goods Item 294,Household,Paper Goods,CleanNest,32.83,22.09,2022-01-28,High
+295,Spark Paper Goods Item 295,Household,Paper Goods,Spark,35.78,21.48,2023-01-21,Low
+296,Spark Paper Goods Item 296,Household,Paper Goods,Spark,12.13,7.58,2024-06-15,High
+297,CleanNest Paper Goods Item 297,Household,Paper Goods,CleanNest,13.99,9.69,2021-11-01,High
+298,Spark Paper Goods Item 298,Household,Paper Goods,Spark,18.96,12.76,2021-06-20,Low
+299,PureFlow Paper Goods Item 299,Household,Paper Goods,PureFlow,31.21,17.21,2024-02-18,Low
+300,CleanNest Paper Goods Item 300,Household,Paper Goods,CleanNest,19.01,13.19,2022-05-25,Low
+301,Spark Paper Goods Item 301,Household,Paper Goods,Spark,24.73,16.56,2022-03-23,Low
+302,CleanNest Paper Goods Item 302,Household,Paper Goods,CleanNest,10.16,5.72,2023-10-26,Medium
+303,Spark Paper Goods Item 303,Household,Paper Goods,Spark,23.53,11.44,2022-09-25,Medium
+304,HomeCore Paper Goods Item 304,Household,Paper Goods,HomeCore,9.51,6.55,2024-08-25,High
+305,PureFlow Paper Goods Item 305,Household,Paper Goods,PureFlow,32.86,22.49,2024-07-06,Low
+306,PureFlow Paper Goods Item 306,Household,Paper Goods,PureFlow,31.25,16.25,2024-12-09,Medium
+307,PureFlow Paper Goods Item 307,Household,Paper Goods,PureFlow,10.8,5.83,2024-07-10,Medium
+308,Spark Paper Goods Item 308,Household,Paper Goods,Spark,31.05,21.82,2022-08-29,Low
+309,Spark Paper Goods Item 309,Household,Paper Goods,Spark,32.44,22.89,2022-12-05,Medium
+310,PureFlow Paper Goods Item 310,Household,Paper Goods,PureFlow,6.82,4.8,2021-10-20,Low
+311,PureFlow Paper Goods Item 311,Household,Paper Goods,PureFlow,29.13,17.92,2023-08-26,Medium
+312,CleanNest Paper Goods Item 312,Household,Paper Goods,CleanNest,11.44,7.32,2024-11-06,Low
+313,HomeCore Paper Goods Item 313,Household,Paper Goods,HomeCore,6.22,4.01,2021-06-10,Low
+314,HomeCore Paper Goods Item 314,Household,Paper Goods,HomeCore,23.62,14.04,2022-03-05,Medium
+315,CleanNest Paper Goods Item 315,Household,Paper Goods,CleanNest,5.44,3.46,2022-07-16,Medium
+316,HomeCore Kitchen Item 316,Household,Kitchen,HomeCore,14.2,8.87,2023-10-06,Low
+317,HomeCore Kitchen Item 317,Household,Kitchen,HomeCore,5.02,3.09,2021-07-30,Low
+318,CleanNest Kitchen Item 318,Household,Kitchen,CleanNest,8.32,4.03,2022-12-03,Medium
+319,HomeCore Kitchen Item 319,Household,Kitchen,HomeCore,5.42,2.78,2024-06-13,Medium
+320,PureFlow Kitchen Item 320,Household,Kitchen,PureFlow,18.4,11.95,2021-05-26,High
+321,PureFlow Kitchen Item 321,Household,Kitchen,PureFlow,33.52,19.27,2022-08-04,Medium
+322,HomeCore Kitchen Item 322,Household,Kitchen,HomeCore,35.21,21.43,2023-09-06,Medium
+323,HomeCore Kitchen Item 323,Household,Kitchen,HomeCore,5.3,3.18,2024-05-14,Medium
+324,Spark Kitchen Item 324,Household,Kitchen,Spark,35.74,20.81,2021-06-17,Medium
+325,Spark Kitchen Item 325,Household,Kitchen,Spark,38.09,24.63,2022-09-27,Low
+326,CleanNest Kitchen Item 326,Household,Kitchen,CleanNest,9.16,4.56,2023-10-28,Medium
+327,CleanNest Kitchen Item 327,Household,Kitchen,CleanNest,19.88,10.59,2024-08-15,Medium
+328,PureFlow Kitchen Item 328,Household,Kitchen,PureFlow,15.65,8.79,2024-11-18,Low
+329,PureFlow Kitchen Item 329,Household,Kitchen,PureFlow,10.63,5.77,2022-09-30,Medium
+330,HomeCore Kitchen Item 330,Household,Kitchen,HomeCore,20.3,11.28,2022-10-16,Medium
+331,HomeCore Kitchen Item 331,Household,Kitchen,HomeCore,36.59,18.65,2023-03-10,High
+332,CleanNest Kitchen Item 332,Household,Kitchen,CleanNest,31.13,16.74,2022-10-24,Medium
+333,PureFlow Kitchen Item 333,Household,Kitchen,PureFlow,20.15,11.58,2024-02-04,Medium
+334,Spark Kitchen Item 334,Household,Kitchen,Spark,32.41,18.61,2021-05-26,Medium
+335,Spark Kitchen Item 335,Household,Kitchen,Spark,24.66,16.16,2022-03-23,Medium
+336,HomeCore Kitchen Item 336,Household,Kitchen,HomeCore,10.41,5.55,2022-05-17,High
+337,HomeCore Kitchen Item 337,Household,Kitchen,HomeCore,27.72,18.04,2022-04-18,High
+338,CleanNest Kitchen Item 338,Household,Kitchen,CleanNest,22.01,12.25,2023-06-13,Medium
+339,PureFlow Kitchen Item 339,Household,Kitchen,PureFlow,9.49,6.22,2021-08-03,Low
+340,HomeCore Kitchen Item 340,Household,Kitchen,HomeCore,34.81,16.99,2021-03-31,Medium
+341,Spark Kitchen Item 341,Household,Kitchen,Spark,18.96,11.75,2023-10-16,Low
+342,CleanNest Kitchen Item 342,Household,Kitchen,CleanNest,14.09,6.83,2024-08-19,Medium
+343,PureFlow Kitchen Item 343,Household,Kitchen,PureFlow,14.62,9.31,2024-08-14,Medium
+344,HomeCore Kitchen Item 344,Household,Kitchen,HomeCore,33.05,16.5,2024-09-14,Medium
+345,CleanNest Kitchen Item 345,Household,Kitchen,CleanNest,35.85,18.12,2021-12-13,Low
+346,Spark Kitchen Item 346,Household,Kitchen,Spark,11.29,6.96,2021-10-15,Medium
+347,PureFlow Kitchen Item 347,Household,Kitchen,PureFlow,4.51,2.82,2024-01-23,Low
+348,PureFlow Kitchen Item 348,Household,Kitchen,PureFlow,31.83,19.38,2021-07-22,Medium
+349,CleanNest Kitchen Item 349,Household,Kitchen,CleanNest,13.48,7.57,2021-01-24,Low
+350,PureFlow Kitchen Item 350,Household,Kitchen,PureFlow,20.75,11.37,2022-04-25,High
+351,CleanNest Kitchen Item 351,Household,Kitchen,CleanNest,31.25,16.59,2024-09-07,Medium
+352,CleanNest Kitchen Item 352,Household,Kitchen,CleanNest,16.79,11.73,2021-10-23,Low
+353,Spark Kitchen Item 353,Household,Kitchen,Spark,25.24,15.34,2021-10-08,Medium
+354,PureFlow Kitchen Item 354,Household,Kitchen,PureFlow,8.52,5.16,2022-02-26,Medium
+355,Spark Kitchen Item 355,Household,Kitchen,Spark,32.36,20.34,2022-04-29,Medium
+356,Spark Kitchen Item 356,Household,Kitchen,Spark,37.13,25.31,2024-04-08,High
+357,HomeCore Kitchen Item 357,Household,Kitchen,HomeCore,8.49,5.63,2023-04-16,Low
+358,Spark Kitchen Item 358,Household,Kitchen,Spark,5.87,3.5,2024-10-28,High
+359,HomeCore Kitchen Item 359,Household,Kitchen,HomeCore,8.25,4.52,2024-11-11,Low
+360,HomeCore Kitchen Item 360,Household,Kitchen,HomeCore,11.03,5.89,2023-01-24,Low
+361,CleanNest Laundry Item 361,Household,Laundry,CleanNest,24.95,14.13,2022-05-16,Medium
+362,Spark Laundry Item 362,Household,Laundry,Spark,30.88,21.63,2023-01-09,Low
+363,CleanNest Laundry Item 363,Household,Laundry,CleanNest,9.42,4.53,2023-02-11,Low
+364,HomeCore Laundry Item 364,Household,Laundry,HomeCore,17.65,9.78,2024-01-25,Medium
+365,HomeCore Laundry Item 365,Household,Laundry,HomeCore,12.51,8.64,2023-10-24,Medium
+366,CleanNest Laundry Item 366,Household,Laundry,CleanNest,4.73,2.87,2022-04-08,High
+367,Spark Laundry Item 367,Household,Laundry,Spark,18.93,9.84,2021-05-21,Medium
+368,PureFlow Laundry Item 368,Household,Laundry,PureFlow,5.46,3.71,2024-07-27,Low
+369,PureFlow Laundry Item 369,Household,Laundry,PureFlow,14.09,8.54,2021-01-10,Medium
+370,CleanNest Laundry Item 370,Household,Laundry,CleanNest,21.78,13.69,2024-04-06,Low
+371,CleanNest Laundry Item 371,Household,Laundry,CleanNest,15.57,7.9,2023-07-15,Low
+372,PureFlow Laundry Item 372,Household,Laundry,PureFlow,18.9,12.35,2023-10-09,Medium
+373,PureFlow Laundry Item 373,Household,Laundry,PureFlow,21.33,10.96,2022-09-13,Medium
+374,PureFlow Laundry Item 374,Household,Laundry,PureFlow,13.9,6.9,2022-06-02,Medium
+375,CleanNest Laundry Item 375,Household,Laundry,CleanNest,30.07,16.41,2025-01-13,Low
+376,PureFlow Laundry Item 376,Household,Laundry,PureFlow,24.73,16.91,2024-06-04,Low
+377,CleanNest Laundry Item 377,Household,Laundry,CleanNest,32.46,19.52,2024-07-01,Medium
+378,Spark Laundry Item 378,Household,Laundry,Spark,11.3,6.32,2023-08-24,Medium
+379,PureFlow Laundry Item 379,Household,Laundry,PureFlow,15.59,10.71,2024-04-29,Medium
+380,CleanNest Laundry Item 380,Household,Laundry,CleanNest,23.78,15.06,2022-02-21,Medium
+381,PureFlow Laundry Item 381,Household,Laundry,PureFlow,13.54,8.61,2021-09-15,Low
+382,Spark Laundry Item 382,Household,Laundry,Spark,4.03,2.83,2021-10-29,High
+383,PureFlow Laundry Item 383,Household,Laundry,PureFlow,8.48,5.24,2022-09-04,Low
+384,CleanNest Laundry Item 384,Household,Laundry,CleanNest,18.71,9.69,2021-02-24,Low
+385,HomeCore Laundry Item 385,Household,Laundry,HomeCore,8.77,5.81,2021-02-06,Medium
+386,CleanNest Laundry Item 386,Household,Laundry,CleanNest,30.23,17.41,2021-12-22,Medium
+387,HomeCore Laundry Item 387,Household,Laundry,HomeCore,20.0,10.01,2022-12-07,Low
+388,PureFlow Laundry Item 388,Household,Laundry,PureFlow,36.44,21.92,2024-01-25,Medium
+389,CleanNest Laundry Item 389,Household,Laundry,CleanNest,16.12,8.96,2024-08-20,Medium
+390,PureFlow Laundry Item 390,Household,Laundry,PureFlow,5.78,3.86,2023-02-28,Medium
+391,CleanNest Laundry Item 391,Household,Laundry,CleanNest,7.99,5.61,2022-08-31,High
+392,Spark Laundry Item 392,Household,Laundry,Spark,22.14,14.12,2021-03-08,Medium
+393,HomeCore Laundry Item 393,Household,Laundry,HomeCore,20.08,10.97,2024-10-16,Medium
+394,PureFlow Laundry Item 394,Household,Laundry,PureFlow,35.25,21.07,2023-01-24,Low
+395,CleanNest Laundry Item 395,Household,Laundry,CleanNest,21.25,10.44,2021-04-30,Medium
+396,CleanNest Laundry Item 396,Household,Laundry,CleanNest,24.84,14.48,2025-02-08,Medium
+397,HomeCore Laundry Item 397,Household,Laundry,HomeCore,13.89,7.26,2021-10-05,Medium
+398,HomeCore Laundry Item 398,Household,Laundry,HomeCore,30.65,15.61,2023-08-29,Medium
+399,CleanNest Laundry Item 399,Household,Laundry,CleanNest,14.85,7.85,2024-07-19,High
+400,Spark Laundry Item 400,Household,Laundry,Spark,26.69,14.55,2023-06-19,Low
+401,CleanNest Laundry Item 401,Household,Laundry,CleanNest,26.87,16.25,2022-04-28,Medium
+402,CleanNest Laundry Item 402,Household,Laundry,CleanNest,25.49,12.9,2022-04-30,Medium
+403,Spark Laundry Item 403,Household,Laundry,Spark,13.67,9.48,2024-08-28,High
+404,Spark Laundry Item 404,Household,Laundry,Spark,24.6,12.52,2024-07-31,High
+405,CleanNest Laundry Item 405,Household,Laundry,CleanNest,28.05,15.32,2024-06-27,Medium
+406,GlowUp Skincare Item 406,Personal Care,Skincare,GlowUp,27.25,12.53,2025-01-14,Low
+407,SoftSense Skincare Item 407,Personal Care,Skincare,SoftSense,22.05,13.75,2023-05-21,Medium
+408,GlowUp Skincare Item 408,Personal Care,Skincare,GlowUp,10.29,6.23,2021-04-07,Low
+409,CarePlus Skincare Item 409,Personal Care,Skincare,CarePlus,14.85,6.51,2024-10-09,Medium
+410,SoftSense Skincare Item 410,Personal Care,Skincare,SoftSense,28.98,13.38,2023-06-23,Low
+411,SoftSense Skincare Item 411,Personal Care,Skincare,SoftSense,3.22,1.54,2025-02-04,Medium
+412,CarePlus Skincare Item 412,Personal Care,Skincare,CarePlus,27.54,16.23,2021-11-01,Medium
+413,GlowUp Skincare Item 413,Personal Care,Skincare,GlowUp,9.3,4.97,2023-03-14,Medium
+414,FreshMint Skincare Item 414,Personal Care,Skincare,FreshMint,16.92,10.85,2022-04-09,Low
+415,SoftSense Skincare Item 415,Personal Care,Skincare,SoftSense,31.3,16.39,2023-06-18,High
+416,GlowUp Skincare Item 416,Personal Care,Skincare,GlowUp,10.22,5.02,2025-01-09,Low
+417,SoftSense Skincare Item 417,Personal Care,Skincare,SoftSense,12.67,6.5,2022-07-20,Medium
+418,CarePlus Skincare Item 418,Personal Care,Skincare,CarePlus,34.5,20.92,2022-10-14,Low
+419,CarePlus Skincare Item 419,Personal Care,Skincare,CarePlus,28.09,17.34,2021-06-25,Medium
+420,FreshMint Skincare Item 420,Personal Care,Skincare,FreshMint,29.49,17.1,2024-07-11,Medium
+421,GlowUp Skincare Item 421,Personal Care,Skincare,GlowUp,8.5,5.61,2024-11-24,Medium
+422,GlowUp Skincare Item 422,Personal Care,Skincare,GlowUp,16.81,8.0,2021-09-28,Low
+423,CarePlus Skincare Item 423,Personal Care,Skincare,CarePlus,30.98,19.8,2023-04-22,High
+424,CarePlus Skincare Item 424,Personal Care,Skincare,CarePlus,31.67,14.03,2021-06-02,Low
+425,GlowUp Skincare Item 425,Personal Care,Skincare,GlowUp,17.57,9.27,2023-01-22,Medium
+426,CarePlus Skincare Item 426,Personal Care,Skincare,CarePlus,25.93,11.22,2021-01-26,Medium
+427,SoftSense Skincare Item 427,Personal Care,Skincare,SoftSense,3.1,1.73,2024-01-23,Medium
+428,SoftSense Skincare Item 428,Personal Care,Skincare,SoftSense,31.17,17.49,2024-06-05,Medium
+429,GlowUp Skincare Item 429,Personal Care,Skincare,GlowUp,4.67,2.26,2022-04-25,Medium
+430,CarePlus Skincare Item 430,Personal Care,Skincare,CarePlus,12.37,5.53,2024-11-04,Low
+431,GlowUp Skincare Item 431,Personal Care,Skincare,GlowUp,28.61,16.68,2023-11-23,Medium
+432,CarePlus Skincare Item 432,Personal Care,Skincare,CarePlus,12.79,6.04,2021-05-19,Low
+433,CarePlus Skincare Item 433,Personal Care,Skincare,CarePlus,27.06,12.73,2022-08-25,High
+434,GlowUp Skincare Item 434,Personal Care,Skincare,GlowUp,13.49,8.74,2022-09-10,Medium
+435,CarePlus Skincare Item 435,Personal Care,Skincare,CarePlus,8.69,4.5,2021-09-25,Medium
+436,FreshMint Skincare Item 436,Personal Care,Skincare,FreshMint,13.63,7.79,2022-04-21,Low
+437,CarePlus Skincare Item 437,Personal Care,Skincare,CarePlus,26.23,13.03,2022-07-24,Medium
+438,CarePlus Skincare Item 438,Personal Care,Skincare,CarePlus,14.04,7.1,2024-07-01,Low
+439,FreshMint Skincare Item 439,Personal Care,Skincare,FreshMint,22.27,13.65,2022-08-30,Medium
+440,CarePlus Skincare Item 440,Personal Care,Skincare,CarePlus,29.54,16.88,2023-11-14,Medium
+441,SoftSense Skincare Item 441,Personal Care,Skincare,SoftSense,32.22,21.31,2023-09-05,High
+442,CarePlus Skincare Item 442,Personal Care,Skincare,CarePlus,7.55,4.71,2023-06-14,High
+443,GlowUp Skincare Item 443,Personal Care,Skincare,GlowUp,23.81,15.13,2024-09-15,Low
+444,FreshMint Skincare Item 444,Personal Care,Skincare,FreshMint,5.75,3.0,2021-06-28,Medium
+445,CarePlus Skincare Item 445,Personal Care,Skincare,CarePlus,25.01,11.46,2023-01-30,Low
+446,CarePlus Skincare Item 446,Personal Care,Skincare,CarePlus,11.56,6.27,2022-11-16,Medium
+447,GlowUp Skincare Item 447,Personal Care,Skincare,GlowUp,28.13,17.8,2021-02-06,Medium
+448,CarePlus Skincare Item 448,Personal Care,Skincare,CarePlus,26.41,12.16,2021-08-28,Medium
+449,FreshMint Skincare Item 449,Personal Care,Skincare,FreshMint,29.45,16.77,2024-12-06,Medium
+450,FreshMint Skincare Item 450,Personal Care,Skincare,FreshMint,9.14,5.6,2021-08-04,Low
+451,FreshMint Haircare Item 451,Personal Care,Haircare,FreshMint,23.24,10.54,2023-02-28,High
+452,SoftSense Haircare Item 452,Personal Care,Haircare,SoftSense,14.21,6.5,2023-01-22,Medium
+453,CarePlus Haircare Item 453,Personal Care,Haircare,CarePlus,30.53,14.85,2023-07-07,Medium
+454,GlowUp Haircare Item 454,Personal Care,Haircare,GlowUp,8.39,4.7,2022-06-20,High
+455,GlowUp Haircare Item 455,Personal Care,Haircare,GlowUp,7.66,4.56,2024-10-28,Low
+456,CarePlus Haircare Item 456,Personal Care,Haircare,CarePlus,13.98,8.61,2022-12-21,Low
+457,CarePlus Haircare Item 457,Personal Care,Haircare,CarePlus,22.15,12.88,2024-08-26,Low
+458,CarePlus Haircare Item 458,Personal Care,Haircare,CarePlus,24.19,11.1,2023-08-02,Low
+459,GlowUp Haircare Item 459,Personal Care,Haircare,GlowUp,24.19,10.28,2024-06-27,Low
+460,CarePlus Haircare Item 460,Personal Care,Haircare,CarePlus,30.22,18.33,2021-11-08,Medium
+461,SoftSense Haircare Item 461,Personal Care,Haircare,SoftSense,16.66,9.74,2021-09-28,Medium
+462,SoftSense Haircare Item 462,Personal Care,Haircare,SoftSense,31.71,18.25,2023-06-27,Medium
+463,GlowUp Haircare Item 463,Personal Care,Haircare,GlowUp,23.07,10.1,2023-03-29,Medium
+464,SoftSense Haircare Item 464,Personal Care,Haircare,SoftSense,26.52,12.38,2024-07-09,Medium
+465,GlowUp Haircare Item 465,Personal Care,Haircare,GlowUp,4.54,2.35,2024-02-29,Low
+466,SoftSense Haircare Item 466,Personal Care,Haircare,SoftSense,31.27,14.78,2021-08-27,Medium
+467,GlowUp Haircare Item 467,Personal Care,Haircare,GlowUp,19.91,12.98,2024-12-25,High
+468,SoftSense Haircare Item 468,Personal Care,Haircare,SoftSense,19.51,10.07,2024-07-18,Medium
+469,GlowUp Haircare Item 469,Personal Care,Haircare,GlowUp,5.23,2.34,2021-09-05,Medium
+470,SoftSense Haircare Item 470,Personal Care,Haircare,SoftSense,30.33,18.72,2024-04-26,High
+471,FreshMint Haircare Item 471,Personal Care,Haircare,FreshMint,27.71,13.07,2021-07-14,Low
+472,GlowUp Haircare Item 472,Personal Care,Haircare,GlowUp,5.19,2.62,2021-08-17,High
+473,CarePlus Haircare Item 473,Personal Care,Haircare,CarePlus,7.99,4.15,2024-07-20,High
+474,FreshMint Haircare Item 474,Personal Care,Haircare,FreshMint,8.86,4.6,2021-10-20,Medium
+475,GlowUp Haircare Item 475,Personal Care,Haircare,GlowUp,10.67,7.07,2024-11-17,Medium
+476,CarePlus Haircare Item 476,Personal Care,Haircare,CarePlus,28.64,12.31,2022-06-29,Low
+477,SoftSense Haircare Item 477,Personal Care,Haircare,SoftSense,17.88,11.3,2024-02-12,Medium
+478,FreshMint Haircare Item 478,Personal Care,Haircare,FreshMint,27.7,14.49,2023-10-25,Medium
+479,FreshMint Haircare Item 479,Personal Care,Haircare,FreshMint,25.57,11.24,2023-01-08,Medium
+480,SoftSense Haircare Item 480,Personal Care,Haircare,SoftSense,14.22,6.62,2022-12-12,Low
+481,SoftSense Haircare Item 481,Personal Care,Haircare,SoftSense,24.47,10.89,2024-08-19,Low
+482,CarePlus Haircare Item 482,Personal Care,Haircare,CarePlus,11.66,5.56,2023-10-18,High
+483,FreshMint Haircare Item 483,Personal Care,Haircare,FreshMint,4.39,2.13,2022-03-08,Medium
+484,SoftSense Haircare Item 484,Personal Care,Haircare,SoftSense,29.44,14.58,2021-04-26,Medium
+485,GlowUp Haircare Item 485,Personal Care,Haircare,GlowUp,25.8,17.27,2022-08-06,Low
+486,CarePlus Haircare Item 486,Personal Care,Haircare,CarePlus,33.93,21.1,2022-11-03,Low
+487,SoftSense Haircare Item 487,Personal Care,Haircare,SoftSense,7.43,4.32,2023-12-16,Low
+488,FreshMint Haircare Item 488,Personal Care,Haircare,FreshMint,11.45,5.68,2021-07-28,Medium
+489,SoftSense Haircare Item 489,Personal Care,Haircare,SoftSense,29.22,14.16,2021-05-23,Medium
+490,CarePlus Haircare Item 490,Personal Care,Haircare,CarePlus,23.98,15.16,2021-09-09,Medium
+491,GlowUp Haircare Item 491,Personal Care,Haircare,GlowUp,14.1,8.28,2022-09-25,Medium
+492,SoftSense Haircare Item 492,Personal Care,Haircare,SoftSense,18.92,9.36,2022-03-22,Low
+493,CarePlus Haircare Item 493,Personal Care,Haircare,CarePlus,34.01,20.17,2022-01-13,Medium
+494,FreshMint Haircare Item 494,Personal Care,Haircare,FreshMint,4.37,2.62,2025-01-08,Medium
+495,SoftSense Haircare Item 495,Personal Care,Haircare,SoftSense,30.56,14.08,2023-07-15,High
+496,SoftSense Oral Care Item 496,Personal Care,Oral Care,SoftSense,27.32,11.89,2023-02-11,High
+497,SoftSense Oral Care Item 497,Personal Care,Oral Care,SoftSense,7.25,3.27,2022-09-27,Medium
+498,CarePlus Oral Care Item 498,Personal Care,Oral Care,CarePlus,34.81,18.48,2024-02-01,High
+499,FreshMint Oral Care Item 499,Personal Care,Oral Care,FreshMint,15.57,8.74,2022-01-30,Low
+500,GlowUp Oral Care Item 500,Personal Care,Oral Care,GlowUp,28.86,15.13,2022-04-08,Low
+501,CarePlus Oral Care Item 501,Personal Care,Oral Care,CarePlus,32.39,18.01,2024-08-26,High
+502,GlowUp Oral Care Item 502,Personal Care,Oral Care,GlowUp,21.33,10.3,2023-10-23,Low
+503,GlowUp Oral Care Item 503,Personal Care,Oral Care,GlowUp,34.12,15.57,2023-04-02,High
+504,FreshMint Oral Care Item 504,Personal Care,Oral Care,FreshMint,34.35,17.85,2023-04-18,Medium
+505,CarePlus Oral Care Item 505,Personal Care,Oral Care,CarePlus,30.62,15.58,2023-02-03,Low
+506,GlowUp Oral Care Item 506,Personal Care,Oral Care,GlowUp,12.2,5.91,2024-07-26,Medium
+507,GlowUp Oral Care Item 507,Personal Care,Oral Care,GlowUp,6.07,3.06,2024-02-24,Medium
+508,FreshMint Oral Care Item 508,Personal Care,Oral Care,FreshMint,16.52,10.94,2024-10-13,Medium
+509,CarePlus Oral Care Item 509,Personal Care,Oral Care,CarePlus,22.28,11.82,2024-03-21,High
+510,CarePlus Oral Care Item 510,Personal Care,Oral Care,CarePlus,14.89,8.81,2021-02-02,Medium
+511,SoftSense Oral Care Item 511,Personal Care,Oral Care,SoftSense,29.87,15.77,2025-01-08,High
+512,CarePlus Oral Care Item 512,Personal Care,Oral Care,CarePlus,20.88,10.34,2023-02-20,Medium
+513,GlowUp Oral Care Item 513,Personal Care,Oral Care,GlowUp,10.93,5.83,2022-02-18,Low
+514,SoftSense Oral Care Item 514,Personal Care,Oral Care,SoftSense,18.54,10.15,2022-10-20,Low
+515,CarePlus Oral Care Item 515,Personal Care,Oral Care,CarePlus,29.82,18.66,2022-01-19,High
+516,FreshMint Oral Care Item 516,Personal Care,Oral Care,FreshMint,29.66,19.55,2024-11-25,Low
+517,CarePlus Oral Care Item 517,Personal Care,Oral Care,CarePlus,4.74,2.98,2024-05-06,Low
+518,CarePlus Oral Care Item 518,Personal Care,Oral Care,CarePlus,4.13,1.8,2024-02-10,Low
+519,CarePlus Oral Care Item 519,Personal Care,Oral Care,CarePlus,19.15,12.67,2023-08-23,Medium
+520,GlowUp Oral Care Item 520,Personal Care,Oral Care,GlowUp,11.92,5.51,2021-04-26,High
+521,SoftSense Oral Care Item 521,Personal Care,Oral Care,SoftSense,8.02,4.42,2024-08-14,Medium
+522,CarePlus Oral Care Item 522,Personal Care,Oral Care,CarePlus,30.69,17.51,2022-11-07,High
+523,CarePlus Oral Care Item 523,Personal Care,Oral Care,CarePlus,26.88,16.28,2021-05-20,Medium
+524,FreshMint Oral Care Item 524,Personal Care,Oral Care,FreshMint,33.55,22.11,2024-03-18,Medium
+525,CarePlus Oral Care Item 525,Personal Care,Oral Care,CarePlus,19.25,8.73,2023-07-27,Low
+526,CarePlus Oral Care Item 526,Personal Care,Oral Care,CarePlus,31.2,14.76,2022-01-14,Medium
+527,CarePlus Oral Care Item 527,Personal Care,Oral Care,CarePlus,24.07,10.91,2022-09-21,Medium
+528,GlowUp Oral Care Item 528,Personal Care,Oral Care,GlowUp,22.24,14.04,2021-06-10,Medium
+529,GlowUp Oral Care Item 529,Personal Care,Oral Care,GlowUp,33.79,20.86,2023-02-20,Low
+530,SoftSense Oral Care Item 530,Personal Care,Oral Care,SoftSense,31.1,19.39,2022-03-02,Medium
+531,GlowUp Oral Care Item 531,Personal Care,Oral Care,GlowUp,16.16,8.42,2024-07-31,Medium
+532,FreshMint Oral Care Item 532,Personal Care,Oral Care,FreshMint,29.82,16.16,2021-06-19,Medium
+533,CarePlus Oral Care Item 533,Personal Care,Oral Care,CarePlus,24.35,14.74,2022-05-13,Medium
+534,SoftSense Oral Care Item 534,Personal Care,Oral Care,SoftSense,10.98,6.35,2023-05-14,Low
+535,GlowUp Oral Care Item 535,Personal Care,Oral Care,GlowUp,10.9,6.66,2024-09-25,Medium
+536,CarePlus Oral Care Item 536,Personal Care,Oral Care,CarePlus,11.35,4.8,2021-10-03,Medium
+537,CarePlus Oral Care Item 537,Personal Care,Oral Care,CarePlus,21.54,9.31,2024-02-15,Low
+538,FreshMint Oral Care Item 538,Personal Care,Oral Care,FreshMint,7.78,3.88,2022-06-20,Low
+539,GlowUp Oral Care Item 539,Personal Care,Oral Care,GlowUp,12.69,8.6,2023-01-22,Low
+540,CarePlus Oral Care Item 540,Personal Care,Oral Care,CarePlus,19.18,10.64,2024-12-17,Medium
+541,GlowUp Bath Item 541,Personal Care,Bath,GlowUp,30.63,15.9,2023-05-27,Low
+542,FreshMint Bath Item 542,Personal Care,Bath,FreshMint,6.78,3.73,2022-03-18,Medium
+543,SoftSense Bath Item 543,Personal Care,Bath,SoftSense,16.86,11.29,2023-07-05,Low
+544,SoftSense Bath Item 544,Personal Care,Bath,SoftSense,3.11,1.87,2025-01-20,Medium
+545,FreshMint Bath Item 545,Personal Care,Bath,FreshMint,5.99,2.76,2023-07-03,Low
+546,FreshMint Bath Item 546,Personal Care,Bath,FreshMint,25.89,11.72,2024-11-11,Medium
+547,GlowUp Bath Item 547,Personal Care,Bath,GlowUp,3.09,1.77,2023-09-21,Low
+548,SoftSense Bath Item 548,Personal Care,Bath,SoftSense,28.36,14.76,2023-06-11,Medium
+549,GlowUp Bath Item 549,Personal Care,Bath,GlowUp,5.3,3.59,2022-03-13,Medium
+550,SoftSense Bath Item 550,Personal Care,Bath,SoftSense,28.22,18.08,2024-03-31,Medium
+551,FreshMint Bath Item 551,Personal Care,Bath,FreshMint,14.76,6.73,2023-09-01,Medium
+552,GlowUp Bath Item 552,Personal Care,Bath,GlowUp,22.0,14.31,2023-06-03,Low
+553,CarePlus Bath Item 553,Personal Care,Bath,CarePlus,17.6,9.94,2022-12-22,Low
+554,FreshMint Bath Item 554,Personal Care,Bath,FreshMint,8.34,5.36,2021-02-27,High
+555,SoftSense Bath Item 555,Personal Care,Bath,SoftSense,23.01,10.44,2022-04-26,Medium
+556,GlowUp Bath Item 556,Personal Care,Bath,GlowUp,28.8,19.41,2021-11-25,Medium
+557,FreshMint Bath Item 557,Personal Care,Bath,FreshMint,4.94,2.75,2021-10-07,Medium
+558,GlowUp Bath Item 558,Personal Care,Bath,GlowUp,17.03,8.23,2023-06-11,Medium
+559,FreshMint Bath Item 559,Personal Care,Bath,FreshMint,29.63,16.93,2021-03-22,Medium
+560,SoftSense Bath Item 560,Personal Care,Bath,SoftSense,14.36,6.26,2021-05-23,Medium
+561,CarePlus Bath Item 561,Personal Care,Bath,CarePlus,14.99,8.46,2021-06-22,Low
+562,SoftSense Bath Item 562,Personal Care,Bath,SoftSense,18.78,12.53,2024-02-15,Medium
+563,GlowUp Bath Item 563,Personal Care,Bath,GlowUp,19.06,12.81,2022-04-26,Low
+564,CarePlus Bath Item 564,Personal Care,Bath,CarePlus,3.48,2.02,2022-02-10,Low
+565,CarePlus Bath Item 565,Personal Care,Bath,CarePlus,34.47,17.52,2023-06-22,Medium
+566,GlowUp Bath Item 566,Personal Care,Bath,GlowUp,34.86,17.69,2023-06-18,Low
+567,GlowUp Bath Item 567,Personal Care,Bath,GlowUp,5.73,2.47,2023-02-27,Medium
+568,SoftSense Bath Item 568,Personal Care,Bath,SoftSense,10.25,4.59,2022-12-24,High
+569,CarePlus Bath Item 569,Personal Care,Bath,CarePlus,16.62,8.37,2021-11-30,Low
+570,GlowUp Bath Item 570,Personal Care,Bath,GlowUp,22.26,11.18,2022-02-05,High
+571,SoftSense Bath Item 571,Personal Care,Bath,SoftSense,26.91,17.5,2021-05-16,Medium
+572,CarePlus Bath Item 572,Personal Care,Bath,CarePlus,16.44,10.81,2023-11-18,Medium
+573,GlowUp Bath Item 573,Personal Care,Bath,GlowUp,23.61,11.58,2023-02-01,Medium
+574,SoftSense Bath Item 574,Personal Care,Bath,SoftSense,26.15,17.56,2022-10-05,Medium
+575,SoftSense Bath Item 575,Personal Care,Bath,SoftSense,14.67,7.67,2021-12-08,Low
+576,SoftSense Bath Item 576,Personal Care,Bath,SoftSense,27.76,11.85,2024-02-10,Medium
+577,FreshMint Bath Item 577,Personal Care,Bath,FreshMint,11.78,5.12,2024-10-30,Medium
+578,GlowUp Bath Item 578,Personal Care,Bath,GlowUp,28.5,17.47,2023-02-13,Medium
+579,SoftSense Bath Item 579,Personal Care,Bath,SoftSense,28.97,19.52,2024-01-29,High
+580,GlowUp Bath Item 580,Personal Care,Bath,GlowUp,3.86,2.11,2022-02-11,Medium
+581,SoftSense Bath Item 581,Personal Care,Bath,SoftSense,3.03,1.77,2022-01-28,High
+582,FreshMint Bath Item 582,Personal Care,Bath,FreshMint,5.73,2.89,2025-01-09,Low
+583,FreshMint Bath Item 583,Personal Care,Bath,FreshMint,7.0,3.68,2021-04-15,Low
+584,CarePlus Bath Item 584,Personal Care,Bath,CarePlus,26.03,12.4,2022-01-10,Medium
+585,FreshMint Bath Item 585,Personal Care,Bath,FreshMint,6.7,3.18,2021-09-10,Medium
+586,SoundArc Phones Item 586,Electronics,Phones,SoundArc,379.35,305.51,2021-04-28,Low
+587,NovaTech Phones Item 587,Electronics,Phones,NovaTech,54.56,42.24,2024-10-29,Medium
+588,HomeWave Phones Item 588,Electronics,Phones,HomeWave,584.2,460.24,2022-03-14,High
+589,HomeWave Phones Item 589,Electronics,Phones,HomeWave,306.37,223.25,2021-02-08,Medium
+590,Voltix Phones Item 590,Electronics,Phones,Voltix,114.2,101.35,2021-08-10,Medium
+591,Voltix Phones Item 591,Electronics,Phones,Voltix,481.54,427.74,2022-11-08,Low
+592,NovaTech Phones Item 592,Electronics,Phones,NovaTech,521.76,426.59,2021-09-25,Medium
+593,SoundArc Phones Item 593,Electronics,Phones,SoundArc,18.64,14.11,2022-08-01,Medium
+594,SoundArc Phones Item 594,Electronics,Phones,SoundArc,221.33,181.9,2022-08-08,High
+595,HomeWave Phones Item 595,Electronics,Phones,HomeWave,454.77,379.02,2023-07-07,Low
+596,SoundArc Phones Item 596,Electronics,Phones,SoundArc,514.79,438.6,2024-10-22,Low
+597,Voltix Phones Item 597,Electronics,Phones,Voltix,101.12,75.05,2024-12-10,Low
+598,Voltix Phones Item 598,Electronics,Phones,Voltix,511.54,422.11,2022-11-26,High
+599,SoundArc Phones Item 599,Electronics,Phones,SoundArc,140.07,124.34,2023-10-01,Low
+600,SoundArc Phones Item 600,Electronics,Phones,SoundArc,47.36,39.01,2024-12-25,Medium
+601,Voltix Phones Item 601,Electronics,Phones,Voltix,598.16,470.35,2023-03-13,Medium
+602,SoundArc Phones Item 602,Electronics,Phones,SoundArc,99.28,82.04,2021-10-08,Medium
+603,Voltix Phones Item 603,Electronics,Phones,Voltix,639.77,512.07,2021-06-21,Medium
+604,HomeWave Phones Item 604,Electronics,Phones,HomeWave,514.79,405.94,2022-04-28,Low
+605,Voltix Phones Item 605,Electronics,Phones,Voltix,222.66,191.65,2021-09-07,Medium
+606,HomeWave Phones Item 606,Electronics,Phones,HomeWave,577.38,485.76,2021-02-15,High
+607,NovaTech Phones Item 607,Electronics,Phones,NovaTech,49.57,37.58,2021-05-03,Low
+608,NovaTech Phones Item 608,Electronics,Phones,NovaTech,259.05,208.63,2023-12-07,High
+609,HomeWave Phones Item 609,Electronics,Phones,HomeWave,512.54,419.24,2022-03-24,Low
+610,SoundArc Phones Item 610,Electronics,Phones,SoundArc,237.58,172.53,2022-09-19,Low
+611,SoundArc Phones Item 611,Electronics,Phones,SoundArc,24.03,18.88,2023-06-25,Medium
+612,HomeWave Phones Item 612,Electronics,Phones,HomeWave,342.26,283.94,2024-04-30,Medium
+613,HomeWave Phones Item 613,Electronics,Phones,HomeWave,545.59,394.59,2021-07-11,Medium
+614,Voltix Phones Item 614,Electronics,Phones,Voltix,117.57,100.8,2024-08-12,Medium
+615,NovaTech Phones Item 615,Electronics,Phones,NovaTech,596.88,424.17,2024-02-10,Medium
+616,SoundArc Phones Item 616,Electronics,Phones,SoundArc,214.5,184.65,2024-06-29,Medium
+617,NovaTech Phones Item 617,Electronics,Phones,NovaTech,590.45,514.8,2022-05-25,High
+618,NovaTech Phones Item 618,Electronics,Phones,NovaTech,346.08,280.54,2021-02-04,Medium
+619,SoundArc Phones Item 619,Electronics,Phones,SoundArc,27.41,23.79,2021-01-25,Medium
+620,HomeWave Phones Item 620,Electronics,Phones,HomeWave,30.27,24.74,2022-06-28,High
+621,HomeWave Phones Item 621,Electronics,Phones,HomeWave,361.19,321.99,2024-09-28,Low
+622,Voltix Phones Item 622,Electronics,Phones,Voltix,120.96,94.86,2023-11-16,Low
+623,NovaTech Phones Item 623,Electronics,Phones,NovaTech,625.57,568.17,2021-11-14,High
+624,SoundArc Phones Item 624,Electronics,Phones,SoundArc,49.69,38.05,2023-08-12,High
+625,SoundArc Phones Item 625,Electronics,Phones,SoundArc,582.29,445.49,2024-11-06,Medium
+626,NovaTech Phones Item 626,Electronics,Phones,NovaTech,618.2,555.52,2023-12-08,Medium
+627,NovaTech Phones Item 627,Electronics,Phones,NovaTech,517.06,432.24,2021-02-27,High
+628,Voltix Phones Item 628,Electronics,Phones,Voltix,578.85,532.31,2021-02-23,Medium
+629,SoundArc Phones Item 629,Electronics,Phones,SoundArc,56.39,47.76,2022-02-19,High
+630,Voltix Phones Item 630,Electronics,Phones,Voltix,551.29,436.52,2021-09-09,High
+631,HomeWave Accessories Item 631,Electronics,Accessories,HomeWave,460.75,372.89,2023-04-10,Medium
+632,SoundArc Accessories Item 632,Electronics,Accessories,SoundArc,462.53,356.04,2023-11-05,Low
+633,HomeWave Accessories Item 633,Electronics,Accessories,HomeWave,498.72,395.48,2024-09-18,High
+634,SoundArc Accessories Item 634,Electronics,Accessories,SoundArc,248.59,225.17,2022-06-07,Medium
+635,Voltix Accessories Item 635,Electronics,Accessories,Voltix,632.79,446.27,2024-01-22,Medium
+636,Voltix Accessories Item 636,Electronics,Accessories,Voltix,284.11,218.74,2021-11-15,Medium
+637,NovaTech Accessories Item 637,Electronics,Accessories,NovaTech,422.86,330.7,2021-01-12,Medium
+638,Voltix Accessories Item 638,Electronics,Accessories,Voltix,43.76,32.52,2022-01-20,Medium
+639,NovaTech Accessories Item 639,Electronics,Accessories,NovaTech,183.88,142.24,2021-04-17,Medium
+640,HomeWave Accessories Item 640,Electronics,Accessories,HomeWave,294.72,257.32,2021-01-06,Medium
+641,SoundArc Accessories Item 641,Electronics,Accessories,SoundArc,184.68,134.17,2022-03-11,Medium
+642,Voltix Accessories Item 642,Electronics,Accessories,Voltix,193.57,177.14,2022-10-24,Low
+643,NovaTech Accessories Item 643,Electronics,Accessories,NovaTech,286.53,248.69,2022-09-17,Low
+644,SoundArc Accessories Item 644,Electronics,Accessories,SoundArc,552.6,408.32,2024-07-14,Medium
+645,SoundArc Accessories Item 645,Electronics,Accessories,SoundArc,187.17,140.2,2023-02-21,Medium
+646,HomeWave Accessories Item 646,Electronics,Accessories,HomeWave,388.88,319.62,2022-07-01,Medium
+647,HomeWave Accessories Item 647,Electronics,Accessories,HomeWave,175.7,154.08,2021-08-26,Medium
+648,HomeWave Accessories Item 648,Electronics,Accessories,HomeWave,229.34,204.75,2023-12-10,Medium
+649,NovaTech Accessories Item 649,Electronics,Accessories,NovaTech,196.84,162.96,2021-03-02,Medium
+650,Voltix Accessories Item 650,Electronics,Accessories,Voltix,485.66,419.7,2022-04-11,Low
+651,NovaTech Accessories Item 651,Electronics,Accessories,NovaTech,42.52,35.82,2021-02-27,High
+652,HomeWave Accessories Item 652,Electronics,Accessories,HomeWave,464.88,397.64,2021-04-28,High
+653,SoundArc Accessories Item 653,Electronics,Accessories,SoundArc,431.49,336.12,2024-04-09,Medium
+654,HomeWave Accessories Item 654,Electronics,Accessories,HomeWave,541.34,427.88,2024-10-12,High
+655,HomeWave Accessories Item 655,Electronics,Accessories,HomeWave,286.89,254.19,2022-03-04,Medium
+656,NovaTech Accessories Item 656,Electronics,Accessories,NovaTech,368.89,275.65,2021-03-07,Medium
+657,NovaTech Accessories Item 657,Electronics,Accessories,NovaTech,341.18,260.37,2024-12-24,Medium
+658,SoundArc Accessories Item 658,Electronics,Accessories,SoundArc,445.44,325.72,2022-02-27,Medium
+659,SoundArc Accessories Item 659,Electronics,Accessories,SoundArc,553.77,451.59,2022-01-07,High
+660,HomeWave Accessories Item 660,Electronics,Accessories,HomeWave,296.95,258.06,2024-05-08,High
+661,HomeWave Accessories Item 661,Electronics,Accessories,HomeWave,614.52,448.46,2021-10-26,High
+662,NovaTech Accessories Item 662,Electronics,Accessories,NovaTech,31.5,27.87,2022-04-11,Medium
+663,HomeWave Accessories Item 663,Electronics,Accessories,HomeWave,168.0,124.82,2022-02-20,Medium
+664,HomeWave Accessories Item 664,Electronics,Accessories,HomeWave,478.25,394.18,2022-11-16,High
+665,NovaTech Accessories Item 665,Electronics,Accessories,NovaTech,546.57,494.56,2023-10-19,High
+666,SoundArc Accessories Item 666,Electronics,Accessories,SoundArc,492.1,406.95,2024-08-29,High
+667,SoundArc Accessories Item 667,Electronics,Accessories,SoundArc,495.02,360.19,2021-02-12,Medium
+668,Voltix Accessories Item 668,Electronics,Accessories,Voltix,325.32,242.79,2022-04-12,Medium
+669,NovaTech Accessories Item 669,Electronics,Accessories,NovaTech,124.85,94.66,2022-10-23,High
+670,NovaTech Accessories Item 670,Electronics,Accessories,NovaTech,606.54,517.87,2024-02-17,High
+671,Voltix Accessories Item 671,Electronics,Accessories,Voltix,180.21,149.24,2021-12-23,Medium
+672,Voltix Accessories Item 672,Electronics,Accessories,Voltix,139.06,115.97,2024-10-24,High
+673,SoundArc Accessories Item 673,Electronics,Accessories,SoundArc,281.32,214.41,2022-05-31,Medium
+674,Voltix Accessories Item 674,Electronics,Accessories,Voltix,146.08,120.71,2021-12-05,High
+675,SoundArc Accessories Item 675,Electronics,Accessories,SoundArc,233.93,183.38,2024-03-28,High
+676,SoundArc Audio Item 676,Electronics,Audio,SoundArc,453.16,379.57,2024-01-28,Medium
+677,SoundArc Audio Item 677,Electronics,Audio,SoundArc,36.55,30.6,2021-10-12,High
+678,SoundArc Audio Item 678,Electronics,Audio,SoundArc,344.66,242.93,2024-06-25,Medium
+679,Voltix Audio Item 679,Electronics,Audio,Voltix,227.75,192.89,2021-12-15,Low
+680,NovaTech Audio Item 680,Electronics,Audio,NovaTech,530.6,402.7,2024-04-23,Low
+681,SoundArc Audio Item 681,Electronics,Audio,SoundArc,147.6,133.37,2023-05-10,Medium
+682,SoundArc Audio Item 682,Electronics,Audio,SoundArc,246.49,193.76,2023-02-17,Low
+683,Voltix Audio Item 683,Electronics,Audio,Voltix,142.31,111.1,2024-01-31,High
+684,HomeWave Audio Item 684,Electronics,Audio,HomeWave,138.58,126.72,2024-09-05,Medium
+685,Voltix Audio Item 685,Electronics,Audio,Voltix,219.11,158.48,2021-08-06,High
+686,Voltix Audio Item 686,Electronics,Audio,Voltix,617.7,523.93,2024-11-07,Medium
+687,NovaTech Audio Item 687,Electronics,Audio,NovaTech,309.64,242.01,2024-05-23,Medium
+688,HomeWave Audio Item 688,Electronics,Audio,HomeWave,362.5,256.67,2024-10-29,High
+689,NovaTech Audio Item 689,Electronics,Audio,NovaTech,375.69,269.62,2021-09-15,Medium
+690,NovaTech Audio Item 690,Electronics,Audio,NovaTech,480.79,424.55,2022-04-03,Low
+691,SoundArc Audio Item 691,Electronics,Audio,SoundArc,575.48,488.25,2022-09-15,Low
+692,HomeWave Audio Item 692,Electronics,Audio,HomeWave,251.79,194.77,2022-05-14,Medium
+693,Voltix Audio Item 693,Electronics,Audio,Voltix,381.04,308.37,2022-02-05,Medium
+694,NovaTech Audio Item 694,Electronics,Audio,NovaTech,385.03,307.45,2022-09-20,Medium
+695,NovaTech Audio Item 695,Electronics,Audio,NovaTech,520.3,470.94,2022-03-23,Medium
+696,NovaTech Audio Item 696,Electronics,Audio,NovaTech,332.6,301.83,2021-09-27,Low
+697,Voltix Audio Item 697,Electronics,Audio,Voltix,628.85,573.57,2021-09-21,Low
+698,NovaTech Audio Item 698,Electronics,Audio,NovaTech,512.85,445.21,2021-01-14,Medium
+699,Voltix Audio Item 699,Electronics,Audio,Voltix,446.83,327.82,2023-01-26,Low
+700,NovaTech Audio Item 700,Electronics,Audio,NovaTech,365.16,308.09,2021-02-02,Medium
+701,Voltix Audio Item 701,Electronics,Audio,Voltix,524.19,458.45,2021-03-31,High
+702,Voltix Audio Item 702,Electronics,Audio,Voltix,364.66,319.38,2022-05-26,High
+703,NovaTech Audio Item 703,Electronics,Audio,NovaTech,349.48,246.05,2024-04-05,Medium
+704,NovaTech Audio Item 704,Electronics,Audio,NovaTech,167.56,135.75,2023-05-09,Medium
+705,Voltix Audio Item 705,Electronics,Audio,Voltix,82.1,59.93,2021-02-25,Medium
+706,HomeWave Audio Item 706,Electronics,Audio,HomeWave,39.14,28.36,2024-01-20,Medium
+707,NovaTech Audio Item 707,Electronics,Audio,NovaTech,633.6,547.17,2022-05-19,Medium
+708,SoundArc Audio Item 708,Electronics,Audio,SoundArc,107.45,82.42,2024-12-02,Low
+709,HomeWave Audio Item 709,Electronics,Audio,HomeWave,304.07,266.54,2022-10-24,Medium
+710,HomeWave Audio Item 710,Electronics,Audio,HomeWave,114.58,101.59,2022-12-25,Medium
+711,NovaTech Audio Item 711,Electronics,Audio,NovaTech,42.64,36.04,2023-09-16,Medium
+712,Voltix Audio Item 712,Electronics,Audio,Voltix,642.31,486.4,2022-01-12,Medium
+713,NovaTech Audio Item 713,Electronics,Audio,NovaTech,417.49,378.22,2021-07-14,Medium
+714,NovaTech Audio Item 714,Electronics,Audio,NovaTech,590.05,413.71,2022-11-24,Medium
+715,NovaTech Audio Item 715,Electronics,Audio,NovaTech,24.18,18.64,2023-08-11,Low
+716,SoundArc Audio Item 716,Electronics,Audio,SoundArc,617.47,457.6,2021-02-26,Medium
+717,SoundArc Audio Item 717,Electronics,Audio,SoundArc,601.54,500.08,2021-05-08,Medium
+718,NovaTech Audio Item 718,Electronics,Audio,NovaTech,477.9,348.8,2023-07-17,High
+719,HomeWave Audio Item 719,Electronics,Audio,HomeWave,177.91,124.98,2021-06-07,Medium
+720,HomeWave Audio Item 720,Electronics,Audio,HomeWave,86.68,69.79,2023-05-24,Low

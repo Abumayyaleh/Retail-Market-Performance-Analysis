@@ -1,0 +1,35 @@
+store_id,store_code,country,city,region,store_type,size_sqm,open_date
+1,STORE_001,Jordan,Amman,Central,Convenience,4995,2020-05-27
+2,STORE_002,Jordan,Amman,Central,Convenience,873,2021-10-26
+3,STORE_003,Jordan,Amman,Central,Supermarket,4066,2023-05-06
+4,STORE_004,Jordan,Amman,Central,Convenience,5451,2022-04-22
+5,STORE_005,Jordan,Zarqa,North,Supermarket,6338,2020-06-19
+6,STORE_006,Jordan,Zarqa,North,Supermarket,1573,2023-01-28
+7,STORE_007,Jordan,Irbid,North,Convenience,3167,2022-07-04
+8,STORE_008,Jordan,Irbid,North,Hypermarket,3515,2019-03-31
+9,STORE_009,Jordan,Aqaba,South,Hypermarket,6687,2018-05-08
+10,STORE_010,Jordan,Aqaba,South,Convenience,2256,2021-06-17
+11,STORE_011,Saudi Arabia,Riyadh,Central,Convenience,5328,2019-12-11
+12,STORE_012,Saudi Arabia,Riyadh,Central,Online Fulfillment,0,2020-06-10
+13,STORE_013,Saudi Arabia,Riyadh,Central,Convenience,6725,2022-02-28
+14,STORE_014,Saudi Arabia,Riyadh,Central,Hypermarket,1661,2020-09-22
+15,STORE_015,Saudi Arabia,Jeddah,West,Supermarket,567,2022-01-26
+16,STORE_016,Saudi Arabia,Jeddah,West,Convenience,5202,2020-01-04
+17,STORE_017,Saudi Arabia,Dammam,East,Supermarket,7264,2022-12-17
+18,STORE_018,Saudi Arabia,Dammam,East,Hypermarket,2935,2022-05-11
+19,STORE_019,UAE,Dubai,Central,Supermarket,1623,2021-10-04
+20,STORE_020,UAE,Dubai,Central,Supermarket,3698,2021-02-02
+21,STORE_021,UAE,Dubai,Central,Hypermarket,5106,2018-11-18
+22,STORE_022,UAE,Dubai,Central,Convenience,6286,2018-07-14
+23,STORE_023,UAE,Abu Dhabi,West,Convenience,2514,2020-05-20
+24,STORE_024,UAE,Abu Dhabi,West,Supermarket,6084,2022-12-02
+25,STORE_025,UAE,Sharjah,North,Convenience,2340,2021-06-27
+26,STORE_026,UAE,Sharjah,North,Supermarket,1263,2022-05-29
+27,STORE_027,Egypt,Cairo,Central,Convenience,303,2022-04-10
+28,STORE_028,Egypt,Cairo,Central,Convenience,5070,2019-07-09
+29,STORE_029,Egypt,Cairo,Central,Hypermarket,5910,2020-10-08
+30,STORE_030,Egypt,Cairo,Central,Supermarket,4373,2019-05-06
+31,STORE_031,Egypt,Alexandria,North,Convenience,1080,2021-08-01
+32,STORE_032,Egypt,Alexandria,North,Hypermarket,3665,2018-06-08
+33,STORE_033,Egypt,Giza,Central,Hypermarket,5796,2021-02-04
+34,STORE_034,Egypt,Giza,Central,Hypermarket,4263,2022-05-09
