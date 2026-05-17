@@ -8,12 +8,11 @@ The goal was to answer a realistic business question:
 
 > Where did margin go in H2 2025, why did it happen, and what should the business do next?
 
-The project uses **PostgreSQL / SQL** for data engineering and business analysis, and **Power BI** for dashboard storytelling and executive reporting.
+The project uses **PostgreSQL ** for data engineering and business analysis, and **Power BI** for dashboard storytelling and executive reporting.
 
 ---
 
-## Dashboard & Model Preview 
-
+## Dashboard & Model Preview
 
 | Page / View | Preview |
 |---|---|
@@ -23,8 +22,6 @@ The project uses **PostgreSQL / SQL** for data engineering and business analysis
 | Product Performance | ![Product Performance](images/product_performance.png) |
 | Store & Regional | ![Store & Regional](images/store_regional.png) |
 | Customers & Returns | ![Customers & Returns](images/customers_returns.png) |
-
-
 
 ---
 
@@ -59,19 +56,21 @@ Leadership wants to know:
 
 The dataset covers two full years of synthetic retail transactions across 34 stores in 4 countries.
 
-The final model includes:
+**Scale:** ~369,000 orders · 842,000 units sold · $21.58M total revenue · 25,000 customers · Jan 2024 – Dec 2025
+
+> **Note on data quality:** The source dataset is clean and well-structured. The focus of this project is on data engineering, schema design, and business analysis. The Bronze layer preserves raw ingestion fidelity as TEXT, and the Silver layer enforces typing, constraints, and referential integrity through explicit SQL transformation.
+
+**Source files:**
 
 ```text
-fact_sales
-fact_returns
-fact_inventory_monthly
-dim_customers
-dim_products
-dim_stores
-dim_date
+fact_sales.csv
+fact_returns.csv
+fact_inventory_monthly.csv
+dim_customers.csv
+dim_products.csv
+dim_stores.csv
+dim_date.csv
 ```
-
-Scale: ~369,000 orders · 842,000 units sold · $21.58M total revenue · 25,000 customers · Jan 2024 – Dec 2025
 
 ---
 
@@ -83,7 +82,7 @@ Raw landing zone. All seven source CSVs are ingested with every column stored as
 
 ### Silver Layer
 
-Cleaned, typed, and constrained tables with proper primary keys, foreign keys, check constraints, and indexes. All 44 business analysis queries run directly against Silver.
+Cleaned, typed, and constrained tables with proper primary keys, foreign keys, check constraints, and indexes. All business analysis queries run directly against Silver.
 
 > **Architecture note:** A full medallion architecture would add a Gold layer of pre-aggregated views on top of Silver for reporting convenience. This project intentionally stops at Silver and writes all analysis queries directly against the normalised star schema using CTEs, window functions, and multi-table joins — to demonstrate SQL querying ability rather than relying on pre-built views.
 
@@ -102,6 +101,66 @@ Load order follows FK dependency: dimensions first, then facts.
 
 ---
 
+## Data Model
+
+```
+                    silver.dim_date
+                         │
+                    (order_date)
+                         │
+silver.dim_customers ────┤
+       (customer_id)     │
+                    silver.fact_sales ────── silver.fact_returns
+silver.dim_products ────┤                          │
+       (product_id)      │              (order_id, customer_id,
+                         │               product_id, store_id)
+silver.dim_stores ───────┘
+       (store_id)        │
+                         └──── silver.fact_inventory_monthly
+                                    (store_id, product_id)
+```
+
+**Dimension tables:**
+
+| Table | Rows | Description |
+|---|---|---|
+| dim_customers | 25,000 | Customer demographics, segment, acquisition channel |
+| dim_products | 720 | Product catalogue with category, brand, pricing |
+| dim_stores | 34 | Store details with location, type, and size |
+| dim_date | 731 | Calendar table covering Jan 2024 – Dec 2025 |
+
+**Fact tables:**
+
+| Table | Rows | Granularity |
+|---|---|---|
+| fact_sales | ~369,000 | One row per order |
+| fact_returns | ~16,300 | One row per return transaction |
+| fact_inventory_monthly | ~587,500 | One row per store × product × month snapshot |
+
+---
+
+## SQL Structure
+
+The SQL script is split into four logical parts that follow the natural flow from raw ingestion to business insight.
+
+**Part 1 — Environment Setup & Data Ingestion (Bronze Layer)**
+
+Creates the bronze schema, defines all raw tables with TEXT columns, and loads the seven source CSVs via `COPY`. This simulates a raw data lake where no assumptions are made about data quality at ingestion time.
+
+**Part 2 — Data Transformation, Typing & Integrity (Silver Layer)**
+
+Creates the silver schema with fully typed tables, primary keys, foreign keys, and check constraints. Inserts data from bronze into silver with explicit type casting. Creates indexes on all join keys and frequently filtered columns. Load order enforces referential integrity — dimensions before facts.
+
+**Part 3 — Baseline Executive & Operational Performance Analytics**
+
+Answers business questions across year-over-year performance, revenue and margin trends, discount rate analysis, product and brand profitability, customer segment behaviour, store and regional performance, returns analysis, and inventory health. Covers Sections 0–7 of the analysis (37 business questions).
+
+**Part 4 — Deep-Dive Loss-Leader & Cross-Category Basket Analysis**
+
+Tests and validates the Electronics loss-leader hypothesis. Quantifies the cross-category attachment rate, the profit difference between Electronics-only and cross-category buyers, and the exact discount rate at which the strategy stops paying for itself. Covers Section 8 of the analysis (7 business questions).
+
+---
+
 ## Analytics Workflow
 
 ### 1. Bronze Ingestion
@@ -110,7 +169,7 @@ Source CSVs loaded into PostgreSQL using `COPY` with all columns as `TEXT`. This
 
 ---
 
-### 2. Silver Layer — Cleaning and Typing
+### 2. Silver Layer — Typing and Integrity
 
 Each table is inserted into Silver with explicit type casting, constraint enforcement, and FK validation. Check constraints cover quantity ranges, margin logic, and date ordering. Indexes are created on all join keys and frequently filtered columns.
 
@@ -292,7 +351,7 @@ Personal Care has the highest margin in the portfolio (44.13%) and the lowest di
 - Design and launch a referral programme with dual-sided incentives
 - Pilot the "Not Needed" returns policy in one region
 
-### 61–90 Days: Measure and report
+### 61–60 Days: Measure and report
 
 - Track monthly discount rate and margin by category
 - Monitor Electronics stockout rate in Central
@@ -301,24 +360,12 @@ Personal Care has the highest margin in the portfolio (44.13%) and the lowest di
 
 ---
 
-## Dashboard Pages
-
-```text
-1. Executive Overview
-2. Discounts & Margin Health
-3. Product Performance
-4. Store & Regional
-5. Customers & Returns
-```
-
----
-
 ## Project Files
 
 ```text
 retail-market-analysis/
 │
-├── data/                            # Synthetic source CSVs (not tracked in git)
+├── data/                            # Synthetic source CSVs (Not tracked in git)
 │   ├── fact_sales.csv
 │   ├── fact_returns.csv
 │   ├── fact_inventory_monthly.csv
@@ -328,16 +375,13 @@ retail-market-analysis/
 │   └── dim_date.csv
 │
 ├── sql/
-│   └── retail_analysis.sql          # Full Bronze-Silver pipeline + 9-section analysis
+│   ├── 01_bronze_layer.sql          # Environment reset & raw CSV text ingestion
+│   ├── 02_silver_layer.sql          # Type-casting, structural constraints, & optimization indexes
+│   ├── 03_baseline_analytics.sql    # Executive macro performance & regional summaries
+│   └── 04_operational_deep_dives.sql # Loss-leader thresholds, stockout tracking, & basket attachment
 │
-├── powerbi/
-│   └── dashboard_blueprint.md       # 5-page Power BI layout and DAX measure guide
-│
-├── reports/
-│   ├── executive_summary.docx       # Non-technical narrative for leadership
-│   └── presentation.pptx            # Slide deck for stakeholder delivery
-│
-├── images/
+├── images/                          # Documentation schemas and dashboard layouts
+│   ├── data_model_schema.png
 │   ├── executive_overview.png
 │   ├── discounts_margin.png
 │   ├── product_performance.png
@@ -346,6 +390,18 @@ retail-market-analysis/
 │
 └── README.md
 ```
+
+---
+
+## How to Run
+
+**Prerequisites:** PostgreSQL 13+, source CSV files saved locally.
+
+```bash
+psql -U your_user -d your_database -f sql/retail_analysis.sql
+```
+
+Update the `COPY` file paths at the top of the script to match your local data directory before running. The script is idempotent — it drops and recreates both schemas on every run.
 
 ---
 
