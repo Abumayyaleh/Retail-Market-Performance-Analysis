@@ -1,0 +1,95 @@
+-- =========================================================
+-- RETAIL MARKET PERFORMANCE ANALYSIS
+-- PART 3: BASELINE BUSINESS PERFORMANCE & REGIONAL TRENDS
+-- =========================================================
+
+-- Q1: Top-Level Year-over-Year Performance Check
+SELECT
+    d.year,
+    COUNT(*)                                                                   AS total_orders,
+    SUM(s.quantity)                                                            AS total_units,
+    ROUND(SUM(s.net_revenue), 2)                                               AS total_revenue,
+    ROUND(SUM(s.profit), 2)                                                    AS total_profit,
+    ROUND(SUM(s.profit) * 100.0 / NULLIF(SUM(s.net_revenue), 0), 2)           AS margin_pct,
+    ROUND(SUM(s.discount_amount) * 100.0 / NULLIF(SUM(s.gross_revenue), 0), 2) AS blended_discount_pct,
+    ROUND(SUM(s.net_revenue) / NULLIF(COUNT(*), 0), 2)                        AS avg_order_value
+FROM silver.fact_sales AS s
+JOIN silver.dim_date   AS d ON s.order_date = d.date
+GROUP d.year
+ORDER BY d.year;
+
+-- Q2: Macro Performance Trend Over Time (Rolling Cumulative Window)
+WITH monthly_metrics AS (
+    SELECT
+        DATE_TRUNC('month', order_date)::DATE AS month_start,
+        SUM(net_revenue)                      AS monthly_revenue,
+        SUM(profit)                           AS monthly_profit
+    FROM silver.fact_sales
+    GROUP BY 1
+)
+SELECT
+    month_start,
+    ROUND(monthly_revenue, 2)                                         AS monthly_revenue,
+    ROUND(monthly_profit, 2)                                          AS monthly_profit,
+    ROUND(SUM(monthly_revenue) OVER (ORDER BY month_start), 2)        AS running_revenue,
+    ROUND(LAG(monthly_revenue) OVER (ORDER BY month_start), 2)        AS prev_month_revenue,
+    ROUND(SUM(monthly_profit) OVER (ORDER BY month_start), 2)         AS running_profit,
+    ROUND(LAG(monthly_profit) OVER (ORDER BY month_start), 2)         AS prev_month_profit
+FROM monthly_metrics
+ORDER BY month_start;
+
+-- Q3: Category Performance Overivew
+SELECT
+    p.category,
+    ROUND(SUM(s.net_revenue), 2)                                  AS total_revenue,
+    ROUND(SUM(s.profit), 2)                                       AS total_profit,
+    ROUND(SUM(s.profit) * 100.0 / NULLIF(SUM(s.net_revenue), 0), 2) AS margin_pct,
+    SUM(s.quantity)                                               AS total_units_sold
+FROM silver.dim_products AS p
+JOIN silver.fact_sales   AS s ON p.product_id = s.product_id
+GROUP BY p.category
+ORDER BY total_revenue DESC;
+
+-- Q4: Country Performance Breakdown
+SELECT
+    st.country,
+    COUNT(*)                                                                   AS total_orders,
+    ROUND(SUM(s.net_revenue), 2)                                               AS total_revenue,
+    ROUND(SUM(s.profit), 2)                                                    AS total_profit,
+    ROUND(SUM(s.profit) * 100.0 / NULLIF(SUM(s.net_revenue), 0), 2)           AS profit_margin_pct,
+    ROUND(SUM(s.discount_amount) * 100.0 / NULLIF(SUM(s.gross_revenue), 0), 2) AS discount_pct
+FROM silver.fact_sales  AS s
+JOIN silver.dim_stores  AS st ON s.store_id = st.store_id
+GROUP BY st.country
+ORDER BY total_revenue DESC;
+
+-- Q5: Out of Stock Vulnerabilities vs. Capital Overstock Paradox
+-- [Below Reorder Point Analysis]
+SELECT
+    p.category,
+    st.region,
+    COUNT(DISTINCT i.snapshot_month)                AS months_affected,
+    COUNT(*)                                        AS total_low_stock_cases,
+    ROUND(AVG(i.reorder_point - i.ending_stock), 0) AS avg_stock_gap
+FROM silver.fact_inventory_monthly AS i
+JOIN silver.dim_products           AS p  ON i.product_id = p.product_id
+JOIN silver.dim_stores             AS st ON i.store_id   = st.store_id
+WHERE i.ending_stock < i.reorder_point
+GROUP BY p.category, st.region
+ORDER BY total_low_stock_cases DESC
+LIMIT 5;
+
+-- [Overstock Analysis]
+SELECT
+    p.category,
+    st.region,
+    COUNT(DISTINCT i.snapshot_month)                     AS months_affected,
+    COUNT(*)                                             AS total_overstock_cases,
+    ROUND(AVG(i.stock_on_hand - i.reorder_point * 2), 0) AS avg_excess_units
+FROM silver.fact_inventory_monthly AS i
+JOIN silver.dim_products           AS p  ON i.product_id = p.product_id
+JOIN silver.dim_stores             AS st ON i.store_id   = st.store_id
+WHERE i.stock_on_hand > i.reorder_point * 2
+GROUP BY p.category, st.region
+ORDER BY total_overstock_cases DESC
+LIMIT 5;
