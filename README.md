@@ -8,7 +8,7 @@ The goal was to answer a realistic business question:
 
 > Where did margin go in H2 2025, why did it happen, and what should the business do next?
 
-The project uses **PostgreSQL ** for data engineering and business analysis, and **Power BI** for dashboard storytelling and executive reporting.
+The project uses **PostgreSQL** for data engineering and business analysis, and **Power BI** for dashboard storytelling and executive reporting.
 
 ---
 
