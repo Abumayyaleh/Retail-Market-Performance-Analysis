@@ -461,5 +461,5 @@ The recommended focus areas are:
 ---
 
 **Author:** Mohammad
-**LinkedIn:** *(add your profile link)*
+**LinkedIn:** *(https://www.linkedin.com/in/mohammad-abu-mayyaleh/)*
 **Tools:** PostgreSQL · Power BI · DAX · SQL
