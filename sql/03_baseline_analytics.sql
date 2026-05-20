@@ -555,7 +555,7 @@ ORDER BY total_revenue DESC;
 --   premium product placement.
 
 
--- Q5: How do the four countries compare on revenue, margin, and order volume?  [NEW]
+-- Q5: How do the four countries compare on revenue, margin, and order volume?  
 SELECT
     st.country,
     COUNT(*)                                                                   AS total_orders,
